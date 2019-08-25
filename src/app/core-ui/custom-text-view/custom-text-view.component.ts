@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
-  selector: 'app-custom-text-view',
+  selector: 'core-ui-text-view',
   template: `
   <p class={{classtouse}}>
     {{text}}
