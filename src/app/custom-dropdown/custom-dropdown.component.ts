@@ -7,15 +7,10 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
     <input class="options-select" name="selectors" type="radio" id="opt1" checked>
     <label for="opt1" class="option">Project yang kamu kerjain apa?</label>
     <input class="options-select" name="selectors" type="radio" id="opt2">
-    <label for="opt2" class="option">Web Development</label>
+    <label for="opt2" class="option">Dinas Kesehatan</label>
     <input class="options-select" name="selectors" type="radio" id="opt3">
-    <label for="opt3" class="option">SEO</label>
-    <input class="options-select" name="selectors" type="radio" id="opt4">
-    <label for="opt4" class="option">UI / UX Designer</label>
-    <input class="options-select" name="selectors" type="radio" id="opt5">
-    <label for="opt5" class="option">Graphic Designer</label>
-    <input class="options-select" name="selectors" type="radio" id="opt6">
-    <label for="opt6" class="option">Video Editor</label>
+    <label for="opt3" class="option">Macroad Design System</label>
+    
 	</div>`,
   styles: [`
   .select {
@@ -47,6 +42,8 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
   white-space:nowrap;
   border-radius: 6px;
   border: 1px solid #E7E7E7;
+  font-family: 'Source Sans Pro', regular;
+  font-size:14px;
 }
  
 .select:hover {
@@ -63,7 +60,8 @@ input {
   opacity:0;
   position:absolute;
   left:-99999px;
-  font: Regular 14px Source Sans Pro;
+  font-family: 'Source Sans Pro', regular;
+  font-size:14px;
   letter-spacing: 0;
   color: black;
 }
@@ -74,7 +72,8 @@ input:checked + label {
   background: #FFF;
   border-top:none;
   position:relative;
-  font: Regular 14px Source Sans Pro;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:14px;
   letter-spacing: 0;
   color: grey;
 }
