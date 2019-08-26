@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --output-hashing=none",
+    "concat": "concat -o output.js ./dist/ExampleApp/runtime.js ./dist/ExampleApp/polyfills.js ./dist/ExampleApp/scripts.js ./dist/ExampleApp/main.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -15,10 +16,13 @@
     "@angular/common": "~8.2.0",
     "@angular/compiler": "~8.2.0",
     "@angular/core": "~8.2.0",
+    "@angular/elements": "^8.2.2",
     "@angular/forms": "~8.2.0",
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "concat": "^1.0.3",
+    "document-register-element": "^1.7.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
