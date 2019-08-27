@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
 
 @Component({
   selector: 'core-ui-button',
-  template: '<button type="button" class={{classtouse}} (click)="countClicks()">{{text}}</button>',
+  template: '<button type="button" class={{classtouse}}>{{text}}</button>',
   styles: [`
     .btn-blue{
       background: none;
@@ -203,9 +203,20 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
       height: 28px;
     }
 
-
-    .btn-Signin{
-      
+    .btn-Alert-Yellow{
+      top: 129px;
+      left: 964px;
+      width: 276px;
+      height: 32px;
+      background: #FFF68F 0% 0% no-repeat padding-box;
+      border: none;
+      border-radius: 6px;
+      text-align: center;
+      font: Semibold 12px/32px Source Sans Pro;
+      letter-spacing: 0;
+      color: #353535;
+      opacity: 1;
+      opacity: 1;
     }
 
 
@@ -224,10 +235,5 @@ export class CustomButtonComponent implements OnInit {
   ngOnInit() {
   }
 
-  countClicks() {
-    this.totalClicks++;
-    this.countChanged.emit(this.totalClicks);
-    alert(this.text);
-    alert(this.classtouse);
-  }
+
 }
