@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule, Injector } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 import { AppComponent } from './app.component';
+import { CheckBoxComponent } from './core-ui/check-box/check-box.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CheckBoxComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CheckBoxComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(private injector: Injector) {
+    const checkBox = createCustomElement(CheckBoxComponent, { injector });
+    customElements.define('check-box', checkBox);
+  } }

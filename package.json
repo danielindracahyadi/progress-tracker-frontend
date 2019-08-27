@@ -12,21 +12,24 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.0",
+    "@angular/cli": "^8.2.2",
     "@angular/common": "~8.2.0",
     "@angular/compiler": "~8.2.0",
+    "@angular/compiler-cli": "^8.2.2",
     "@angular/core": "~8.2.0",
+    "@angular/elements": "^8.2.3",
     "@angular/forms": "~8.2.0",
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "injector": "^0.5.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "document-register-element": "^1.7.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.802.1",
-    "@angular/cli": "~8.2.1",
-    "@angular/compiler-cli": "~8.2.0",
     "@angular/language-service": "~8.2.0",
     "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
