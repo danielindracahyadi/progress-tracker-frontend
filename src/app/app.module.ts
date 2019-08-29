@@ -32,6 +32,7 @@ import { Group1192Component } from './svg/group1192/group1192.component';
     TextViewComponent,
     TextInputComponent,
     ButtonComponent,
+<<<<<<< HEAD
     DatepickerComponent,
     DropdownComponent,
     LoginSceneComponent,
@@ -42,6 +43,9 @@ import { Group1192Component } from './svg/group1192/group1192.component';
     Group1191Component,
     Group1192Component,
     CustomDatepickerComponent
+=======
+    DatepickerComponent
+>>>>>>> update datepicker version 4
   ],
   imports: [
     BrowserModule,
