@@ -67,34 +67,34 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
       cursor: pointer;
     }
 
-    .btn-inCard-ReportAdd {
+    .btn-incard-reportadd {
       top: 448px;
       left: 64px;
       width: 308px;
       height: 28px;
     }
 
-    .btn-inCard-HomeConfirm{
+    .btn-incard-homeconfirm{
       top: 575px;
       left: 364px;
       width: 244px;
       height: 28px;
     }
-    .btn-inCard-HomeCancel{
+    .btn-incard-homecancel{
       top: 619px;
       left: 364px;
       width: 244px;
       height: 28px;
     }
 
-    .btn-free-ReportAdd {
+    .btn-free-reportadd {
       top: 684px;
       left: 40px;
       width: 356px;
       height: 28px;
     }
 
-    .btn-ReportSave{
+    .btn-reportsave{
       top: 728px;
       left: 40px;
       width: 356px;
@@ -102,21 +102,21 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
       font: Bold 18px/32px Source Sans Pro; 
     }
 
-    .btn-PopupConfirm{
+    .btn-popupconfirm{
       top: 536px;
       left: 504px;
       width: 272px;
       height: 40px;
       font: Bold 18px/32px Source Sans Pro;
     }
-    .btn-PopupCancel{
+    .btn-popupcancel{
       top: 496px;
       left: 504px;
       width: 272px;
       height: 28px;
       background:
     }
-    .btn-popup-DeleteConfirm{
+    .btn-popup-deleteconfirm{
       top: 548px;
       left: 504px;
       width: 272px;
@@ -124,7 +124,7 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
       color: #fff;
       background: #D54F4F 0% 0% no-repeat padding-box;
     }
-    .btn-popup-DeleteCancel{
+    .btn-popup-deletecancel{
       top: 548px;
       left: 504px;
       width: 272px;
@@ -133,7 +133,7 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
       color: #00CC9A;
       font: Semibold 12px/32px Source Sans Pro;
     }
-    .btn-popup-ConfirmThanks{
+    .btn-popup-confirmthanks{
       top: 502px;
       left: 504px;
       width: 272px;
@@ -141,7 +141,7 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
       font: Semibold 12px/32px Source Sans Pro;
     }
 
-    .btn-Home-new {
+    .btn-home-new {
       top: 402px;
       left: 65px;
       width: 226px;
@@ -157,14 +157,14 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
       opacity: 1;
     }
 
-    .btn-free-HomeLittle{
+    .btn-free-homelittle{
       top: 740px;
       left: 570px;
       width: 140px;
       height: 28px;
     }
 
-    .btn-free-AddReportRole{
+    .btn-free-addreportrole{
       top: 728px;
       left: 40px;
       width: 356px;
@@ -196,14 +196,14 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
       opacity: 1;
     }
 
-    .btn-inCard-HomeReport{
+    .btn-incard-homereport{
       top: 575px;
       left: 980px;
       width: 244px;
       height: 28px;
     }
 
-    .btn-Alert-Yellow{
+    .btn-alert-yellow{
       top: 129px;
       left: 964px;
       width: 276px;
