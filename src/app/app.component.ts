@@ -6,13 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'Custom element example app';
-  count: number = null;
-
-  constructor() {}
-
-  handleCountChanged($event) {
-    this.count = $event;
-  }
+  
 
 }
