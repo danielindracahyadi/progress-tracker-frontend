@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TextViewComponent } from './core-ui/text-view/text-view.component';
 import { TextInputComponent } from './core-ui/text-input/text-input.component';
-import { CustomButtonComponent } from './core-ui/custom-button/custom-button.component';
+import { ButtonComponent } from './core-ui/button/button.component';
 import { DatepickerComponent } from './core-ui/datepicker/datepicker.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -22,7 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent,
     TextViewComponent,
     TextInputComponent,
-    CustomButtonComponent,
+    ButtonComponent,
     DatepickerComponent
   ],
   imports: [
