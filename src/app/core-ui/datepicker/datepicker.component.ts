@@ -48,7 +48,12 @@ export const MY_FORMATS = {
     opacity: 1;
     }
   `],
-  encapsulation: ViewEncapsulation.Native
+  encapsulation: ViewEncapsulation.Native,
+  providers: [
+    {provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
+
+    {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
+  ],
 })
 
 
@@ -57,7 +62,9 @@ export class CustomDatepickerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
+  month : string[]
 
   date = new FormControl(moment());
 
