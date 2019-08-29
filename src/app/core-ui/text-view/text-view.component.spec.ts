@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomDatepickerComponent } from './custom-datepicker.component';
+import { CustomTextViewComponent } from './text-view.component';
 
-describe('CustomDatepickerComponent', () => {
-  let component: CustomDatepickerComponent;
-  let fixture: ComponentFixture<CustomDatepickerComponent>;
+describe('CustomTextViewComponent', () => {
+  let component: CustomTextViewComponent;
+  let fixture: ComponentFixture<CustomTextViewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CustomDatepickerComponent ]
+      declarations: [ CustomTextViewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CustomDatepickerComponent);
+    fixture = TestBed.createComponent(CustomTextViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
