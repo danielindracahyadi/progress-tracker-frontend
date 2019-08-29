@@ -2,7 +2,16 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'core-ui-check-box',
-  template:'<label class="{{classtouse}}"><input type="checkbox"><span class="checkmark"></span>{{text}}</label>',
+  template:`
+  <label class="{{classtouse}}">
+    <input type="checkbox" (change)="show = !show" ng-model="show" />
+    <span class="checkmark"></span>{{text}}
+  </label>
+
+  <div class="row container-fluid" *ngIf="show" id="divshow" >
+    <input placeholder="ganti dengan slider disini"/>  
+  </div>
+  `,
   styles: [`
   .checkmark {
     position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #eee;
@@ -59,10 +68,10 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 })
 export class CheckBoxComponent implements OnInit {
 
-  
+  opened = false;
+  checked = false;
   @Input() text = 'Checkbox';
   @Input() classtouse = 'x';
-  @Input() classtouse2 = 'y';
   constructor() { }
 
   ngOnInit() {
