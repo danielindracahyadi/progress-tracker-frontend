@@ -7,6 +7,7 @@ import { TextViewComponent } from './core-ui/text-view/text-view.component';
 import { TextInputComponent } from './core-ui/text-input/text-input.component';
 import { ButtonComponent } from './core-ui/button/button.component';
 import { DatepickerComponent } from './core-ui/datepicker/datepicker.component';
+import { CustomDatepickerComponent } from './core-ui/custom-datepicker/custom-datepicker.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -39,7 +40,8 @@ import { Group1192Component } from './svg/group1192/group1192.component';
     CardReportTitleComponent,
     CardReportTaskComponent,
     Group1191Component,
-    Group1192Component
+    Group1192Component,
+    CustomDatepickerComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { Group1192Component } from './svg/group1192/group1192.component';
     MatInputModule,
     MatIconModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
