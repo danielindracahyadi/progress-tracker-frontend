@@ -57,7 +57,7 @@ export const MY_FORMATS = {
 })
 
 
-export class CustomDatepickerComponent implements OnInit {
+export class DatepickerComponent implements OnInit {
 
   constructor() { }
 
