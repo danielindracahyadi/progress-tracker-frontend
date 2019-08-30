@@ -4,12 +4,14 @@ import { createCustomElement } from '@angular/elements';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
+import { LoginSceneComponent } from './pages/login-scene/login-scene.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DropdownComponent,
+    LoginSceneComponent,
   ],
   imports: [
     BrowserModule,
