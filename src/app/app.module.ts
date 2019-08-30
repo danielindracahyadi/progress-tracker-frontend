@@ -3,12 +3,13 @@ import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { DropdownComponentComponent } from './dropdown-component/dropdown-component.component';
+import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DropdownComponentComponent,
+    DropdownComponent,
   ],
   imports: [
     BrowserModule,
@@ -16,12 +17,12 @@ import { DropdownComponentComponent } from './dropdown-component/dropdown-compon
   ],
   providers: [],
   bootstrap: [AppComponent],
-    entryComponents: [DropdownComponentComponent]
+    entryComponents: [DropdownComponent]
 })
 export class AppModule {
 
   constructor(private injector: Injector) {
-    const customDropdown = createCustomElement(DropdownComponentComponent, { injector });
+    const customDropdown = createCustomElement(DropdownComponent, { injector });
     customElements.define('custom-dropdown', customDropdown);
     
   }

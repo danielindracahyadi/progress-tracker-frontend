@@ -3,13 +3,13 @@ import { FormsModule } from '@angular/forms';
 declare var angular: any;
 
 @Component({
-  selector: 'app-dropdown-component',
+  selector: 'app-dropdown',
   template: `
   <div class="dropdown-style">
-  <select>
-    <option  *ngFor="let data of data">{{data}} </option>  
-  </select>
-</div> 
+    <select>
+      <option  *ngFor="let data of data">{{data}} </option>  
+    </select>
+  </div> 
   `,
   styles: [`
   
@@ -45,7 +45,7 @@ declare var angular: any;
   `],
   encapsulation: ViewEncapsulation.Native
 })
-export class DropdownComponentComponent implements OnInit {
+export class DropdownComponent implements OnInit {
   @Input() data: any[];
   constructor() { }
 
