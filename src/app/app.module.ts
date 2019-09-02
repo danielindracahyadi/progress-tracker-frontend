@@ -18,6 +18,7 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatIconModule } from '@angular/material/icon';
 import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
 import { LoginSceneComponent } from './pages/login-scene/login-scene.component';
+import { CheckBoxComponent } from './core-ui/check-box/check-box.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LoginSceneComponent } from './pages/login-scene/login-scene.component';
     ButtonComponent,
     DatepickerComponent,
     DropdownComponent,
-    LoginSceneComponent
+    LoginSceneComponent,
+    CheckBoxComponent
   ],
   imports: [
     BrowserModule,
