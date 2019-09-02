@@ -1,0 +1,33 @@
+.card
+  border: 2px solid lightgrey
+  transition: 0.3s
+  width: 80%
+  &:hover
+    border: 2px solid blue
+
+.container
+  padding: 2px 16px
+
+.column
+  float: left
+  width: 30%
+  padding: 10px
+  font-size: 9px
+
+.row:after
+  content: ""
+  display: table
+  clear: both
+
+.vl
+  border-left: 2px solid lightgrey
+  height: 500px
+
+.pesento
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  &.space-between
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between

@@ -17,6 +17,8 @@ import { MatRippleModule, MatInputModule } from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatIconModule } from '@angular/material/icon';
 import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
+import { CheckBoxComponent } from './core-ui/check-box/check-box.component';
+import { ReportDetailComponent } from './pages/report-detail/report-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
     TextInputComponent,
     ButtonComponent,
     DatepickerComponent,
-    DropdownComponent
+    DropdownComponent,
+    CheckBoxComponent,
+    ReportDetailComponent
   ],
   imports: [
     BrowserModule,
