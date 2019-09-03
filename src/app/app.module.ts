@@ -31,6 +31,10 @@ import { CardAddReportDetailComponent } from './components/card-add-report-detai
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardAddReportTaskComponent } from './components/card-add-report-task/card-add-report-task.component';
 
+import { CardComponent } from './components/card/card.component';
+import { MatCardModule } from '@angular/material';
+import {MatDividerModule} from '@angular/material/divider';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +59,7 @@ import { CardAddReportTaskComponent } from './components/card-add-report-task/ca
     CardAddReportButtonComponent,
     CardAddReportDetailComponent,
     CardAddReportTaskComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
