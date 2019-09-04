@@ -18,6 +18,7 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatIconModule } from '@angular/material/icon';
 import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
 import { CheckBoxComponent } from './core-ui/check-box/check-box.component';
+import { LoginSceneComponent } from './pages/login-scene/login-scene.component';
 import { ReportDetailComponent } from './pages/report-detail/report-detail.component';
 import { CardReportTitleComponent } from './components/card-report-title/card-report-title.component';
 import { CardReportTaskComponent } from './components/card-report-task/card-report-task.component';
@@ -33,7 +34,8 @@ import { CardReportTaskComponent } from './components/card-report-task/card-repo
     CheckBoxComponent,
     ReportDetailComponent,
     CardReportTitleComponent,
-    CardReportTaskComponent
+    CardReportTaskComponent,
+    LoginSceneComponent
   ],
   imports: [
     BrowserModule,
