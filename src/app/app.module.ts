@@ -22,6 +22,7 @@ import { LoginSceneComponent } from './pages/login-scene/login-scene.component';
 import { ReportDetailComponent } from './pages/report-detail/report-detail.component';
 import { CardReportTitleComponent } from './components/card-report-title/card-report-title.component';
 import { CardReportTaskComponent } from './components/card-report-task/card-report-task.component';
+import { LoginSceneComponent } from './pages/login-scene/login-scene.component';
 
 @NgModule({
   declarations: [
