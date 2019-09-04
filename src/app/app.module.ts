@@ -13,15 +13,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatRippleModule, MatInputModule, MatCardModule, MatDividerModule } from '@angular/material';
+import { MatRippleModule, MatInputModule } from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatIconModule } from '@angular/material/icon';
 import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
 import { CheckBoxComponent } from './core-ui/check-box/check-box.component';
 import { LoginSceneComponent } from './pages/login-scene/login-scene.component';
-import { ReportDetailComponent } from './pages/report-detail/report-detail.component';
-import { CardReportTitleComponent } from './components/card-report-title/card-report-title.component';
-import { CardReportTaskComponent } from './components/card-report-task/card-report-task.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +29,6 @@ import { CardReportTaskComponent } from './components/card-report-task/card-repo
     DatepickerComponent,
     DropdownComponent,
     CheckBoxComponent,
-    ReportDetailComponent,
-    CardReportTitleComponent,
-    CardReportTaskComponent,
     LoginSceneComponent
   ],
   imports: [
@@ -50,9 +44,7 @@ import { CardReportTaskComponent } from './components/card-report-task/card-repo
     MatRippleModule,
     MatMomentDateModule,
     MatInputModule,
-    MatIconModule,
-    MatCardModule,
-    MatDividerModule
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
