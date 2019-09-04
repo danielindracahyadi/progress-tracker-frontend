@@ -1,9 +1,6 @@
-
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
-
-    <app-report-detail></app-report-detail>
-
+    <app-report-detail [dataDummy]="dummyCardReportTask"></app-report-detail>
   <h1>
     Welcome to Our Custom Text View
   </h1>
@@ -81,11 +78,9 @@
   <br><br>
   <core-ui-button text="Ada 2 hari 7yang belum kamu isi nih!" classtouse="btn-alert-yellow"></core-ui-button>
   <core-ui-dropdown [data]="['a','b','c']"></core-ui-dropdown>
-<br><br>
+  <br><br>
   <h1>Check-Box</h1>
-  <core-ui-check-box text="Default" classtouse="default"></core-ui-check-box>
-  <core-ui-check-box text="Ada progressnya nih" classtouse="cont-blue"></core-ui-check-box>
-  <core-ui-check-box text="Klik aku maka akan muncul sesuatu" classtouse="cont-red"></core-ui-check-box>
+  <core-ui-check-box text="Ada progressnya nih" classtouse="cont"></core-ui-check-box>
 
 </div>
 <router-outlet></router-outlet>
