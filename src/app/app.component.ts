@@ -62,4 +62,44 @@ export class AppComponent {
     datepicker.close();
   }
 
+  @Output() dummyCardReportTask = [
+    {
+      projectName : "Dinas Kesehatan",
+      role : "UI/UX Designer",
+      workTotal : "4"
+    },
+    {
+      projectName : "MacroAd",
+      role : "UI/UX Designer",
+      workTotal : "168"
+    }
+  ]
+
+  @Output() dummyProjectName = [
+    {
+      dataDropdown : "Dinas Kesehatan",
+    },
+    {
+      dataDropdown : "MacroAd",
+    }
+  ]
+
+  @Output() dummyRoles = [
+    {
+      dataDropdown : "Back End Engineer",
+    },
+    {
+      dataDropdown : "Front End Engineer",
+    },
+    {
+      dataDropdown : "Project Manager",
+    },
+    {
+      dataDropdown : "QA Analyst",
+    },
+    {
+      dataDropdown : "UI / UX Designer",
+    }
+  ]
+
 }

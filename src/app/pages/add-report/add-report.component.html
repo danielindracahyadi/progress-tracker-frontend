@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="column" >
+    <app-card-report-title></app-card-report-title>
+    <br>
+    <app-card-add-report-dropdown [dataProjectName]="dataProjectName" [dataRoles]="dataRoles"></app-card-add-report-dropdown>
+    <br>
+    <app-card-add-report-button (click)="addProject()"></app-card-add-report-button>
+  </div>
+  <div class="column1">
+    <mat-divider vertical style="height:676px; position: absolute;"></mat-divider>
+  </div>
+  <div class="column2" *ngIf="showDetail">
+    <app-card-add-report-detail></app-card-add-report-detail>
+  </div>
+</div>

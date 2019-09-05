@@ -7,7 +7,6 @@ import { TextViewComponent } from './core-ui/text-view/text-view.component';
 import { TextInputComponent } from './core-ui/text-input/text-input.component';
 import { ButtonComponent } from './core-ui/button/button.component';
 import { DatepickerComponent } from './core-ui/datepicker/datepicker.component';
-import { CustomDatepickerComponent } from './core-ui/custom-datepicker/custom-datepicker.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,11 +19,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
 import { LoginSceneComponent } from './pages/login-scene/login-scene.component';
 import { CheckBoxComponent } from './core-ui/check-box/check-box.component';
-import { ReportDetailComponent } from './pages/report-detail/report-detail.component';
-import { CardReportTitleComponent } from './components/card-report-title/card-report-title.component';
-import { CardReportTaskComponent } from './components/card-report-task/card-report-task.component';
 import { Group1191Component } from './svg/group1191/group1191.component';
 import { Group1192Component } from './svg/group1192/group1192.component';
+import { ReportDetailComponent } from './pages/report-detail/report-detail.component';
+import { CardReportTaskComponent } from './components/card-report-task/card-report-task.component';
+import { CardReportTitleComponent } from './components/card-report-title/card-report-title.component';
+import { AddReportComponent } from './pages/add-report/add-report.component';
+import { CardAddReportDropdownComponent } from './components/card-add-report-dropdown/card-add-report-dropdown.component';
+import { CardAddReportButtonComponent } from './components/card-add-report-button/card-add-report-button.component';
+import { CardAddReportDetailComponent } from './components/card-add-report-detail/card-add-report-detail.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { CardAddReportTaskComponent } from './components/card-add-report-task/card-add-report-task.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,6 @@ import { Group1192Component } from './svg/group1192/group1192.component';
     TextViewComponent,
     TextInputComponent,
     ButtonComponent,
-<<<<<<< HEAD
     DatepickerComponent,
     DropdownComponent,
     LoginSceneComponent,
@@ -42,10 +46,16 @@ import { Group1192Component } from './svg/group1192/group1192.component';
     CardReportTaskComponent,
     Group1191Component,
     Group1192Component,
-    CustomDatepickerComponent
-=======
-    DatepickerComponent
->>>>>>> update datepicker version 4
+    CustomDatepickerComponent,
+    DatepickerComponent,
+    CardReportTaskComponent,
+    ReportDetailComponent,
+    CardReportTitleComponent,
+    AddReportComponent,
+    CardAddReportDropdownComponent,
+    CardAddReportButtonComponent,
+    CardAddReportDetailComponent,
+    CardAddReportTaskComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +73,7 @@ import { Group1192Component } from './svg/group1192/group1192.component';
     MatIconModule,
     MatCardModule,
     MatDividerModule,
-    MatIconModule
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

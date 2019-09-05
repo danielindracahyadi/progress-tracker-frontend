@@ -1,4 +1,4 @@
-import { Component,Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component,Input, OnInit, ViewEncapsulation, Output } from '@angular/core';
 declare var angular: any;
 
 @Component({
@@ -8,10 +8,13 @@ declare var angular: any;
   encapsulation: ViewEncapsulation.Native
 })
 export class DropdownComponent implements OnInit {
-  @Input() data: any[];
+  @Input() data: any;
+  @Output() result : any;
+
   constructor() { }
 
   ngOnInit() {
+    this.result = this.data;
   }
 
 }
