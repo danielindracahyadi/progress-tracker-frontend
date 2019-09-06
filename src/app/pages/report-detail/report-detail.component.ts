@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-  selector: 'app-report-detail',
+  selector: 'pages-report-detail',
   templateUrl: './report-detail.component.html',
   styleUrls: ['./report-detail.component.sass']
 })

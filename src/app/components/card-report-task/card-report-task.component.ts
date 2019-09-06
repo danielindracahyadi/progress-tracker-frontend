@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-card-report-task',
+  selector: 'components-card-report-task',
   templateUrl: './card-report-task.component.html',
   styleUrls: ['./card-report-task.component.sass']
 })
@@ -12,7 +12,7 @@ export class CardReportTaskComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("Data", this.data);
+    console.log('Data', this.data);
     this.finalData = this.data;
   }
 
