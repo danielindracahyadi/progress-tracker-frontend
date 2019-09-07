@@ -1,7 +1,9 @@
+import { AppService } from './../../app.service';
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-add-report',
+  selector: 'add-report',
   templateUrl: './add-report.component.html',
   styleUrls: ['./add-report.component.sass']
 })
@@ -12,9 +14,14 @@ export class AddReportComponent implements OnInit {
 
   showDetail = false;
 
-  constructor() { }
+  constructor( 
+    private appService: AppService,
+    private activatedRoutes: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+    console.log(this.appService.getSelectedProjectName());
   }
 
   addProject(){

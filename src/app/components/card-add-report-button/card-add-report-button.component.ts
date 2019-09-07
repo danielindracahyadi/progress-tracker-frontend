@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-card-add-report-button',
+  selector: 'card-add-report-button',
   templateUrl: './card-add-report-button.component.html',
   styleUrls: ['./card-add-report-button.component.sass']
 })

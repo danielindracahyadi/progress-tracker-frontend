@@ -44,11 +44,38 @@ export class AppComponent {
     }
   ];
 
+  @Output() dummyProjectName = [
+    {
+      dataDropdown : 'Dinas Kesehatan',
+    },
+    {
+      dataDropdown : 'MacroAd',
+    }
+  ]
+
+  @Output() dummyRoles = [
+    {
+      dataDropdown : 'Back End Engineer',
+    },
+    {
+      dataDropdown : 'Front End Engineer',
+    },
+    {
+      dataDropdown : 'Project Manager',
+    },
+    {
+      dataDropdown : 'QA Analyst',
+    },
+    {
+      dataDropdown : 'UI / UX Designer',
+    }
+  ]
+
+  date = new FormControl(moment());
+  month: string[]
+
   ngOnInit() {
   }
-  date = new FormControl(moment());
-  month : string[]
-
   chosenYearHandler(normalizedYear: Moment) {
     const ctrlValue = this.date.value;
     ctrlValue.year(normalizedYear.year());
@@ -61,45 +88,4 @@ export class AppComponent {
     this.date.setValue(ctrlValue);
     datepicker.close();
   }
-
-  @Output() dummyCardReportTask = [
-    {
-      projectName : "Dinas Kesehatan",
-      role : "UI/UX Designer",
-      workTotal : "4"
-    },
-    {
-      projectName : "MacroAd",
-      role : "UI/UX Designer",
-      workTotal : "168"
-    }
-  ]
-
-  @Output() dummyProjectName = [
-    {
-      dataDropdown : "Dinas Kesehatan",
-    },
-    {
-      dataDropdown : "MacroAd",
-    }
-  ]
-
-  @Output() dummyRoles = [
-    {
-      dataDropdown : "Back End Engineer",
-    },
-    {
-      dataDropdown : "Front End Engineer",
-    },
-    {
-      dataDropdown : "Project Manager",
-    },
-    {
-      dataDropdown : "QA Analyst",
-    },
-    {
-      dataDropdown : "UI / UX Designer",
-    }
-  ]
-
 }

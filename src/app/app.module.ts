@@ -46,7 +46,6 @@ import { CardAddReportTaskComponent } from './components/card-add-report-task/ca
     CardReportTaskComponent,
     Group1191Component,
     Group1192Component,
-    CustomDatepickerComponent,
     DatepickerComponent,
     CardReportTaskComponent,
     ReportDetailComponent,
