@@ -9,8 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AddReportComponent implements OnInit {
 
-  @Input() dataProjectName = "x";
-  @Input() dataRoles = "x";
+  @Input() dataProjectName = '';
+  @Input() dataRoles = '';
 
   showDetail = false;
 
