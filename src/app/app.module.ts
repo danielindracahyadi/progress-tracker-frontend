@@ -30,7 +30,6 @@ import { CardAddReportButtonComponent } from './components/card-add-report-butto
 import { CardAddReportDetailComponent } from './components/card-add-report-detail/card-add-report-detail.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardAddReportTaskComponent } from './components/card-add-report-task/card-add-report-task.component';
-import { CustomTextViewComponent } from './core-ui/custom-text-view/custom-text-view.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +55,6 @@ import { CustomTextViewComponent } from './core-ui/custom-text-view/custom-text-
     CardAddReportButtonComponent,
     CardAddReportDetailComponent,
     CardAddReportTaskComponent,
-    CustomTextViewComponent
   ],
   imports: [
     BrowserModule,
