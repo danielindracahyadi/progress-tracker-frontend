@@ -33,12 +33,10 @@ export class DropdownComponent implements OnInit {
     if(this.function == "selectProjectName")
     {
       this.appService.setSelectedProjectName(this.selectedData);
-      console.log(this.appService.getSelectedProjectName());
     }
     else if (this.function == "selectRolesName")
     {
       this.appService.setSelectedRolesName(this.selectedData);
-      console.log(this.appService.getSelectedRolesName());
     }
   }
 }

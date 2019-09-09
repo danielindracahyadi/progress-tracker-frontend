@@ -21,7 +21,7 @@ export class AddReportComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.appService.getSelectedProjectName());
+    // console.log(this.appService.getSelectedProjectName());
   }
 
   addProject(){
