@@ -32,8 +32,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardAddReportTaskComponent } from './components/card-add-report-task/card-add-report-task.component';
 
 import { CardComponent } from './components/card/card.component';
-import { MatCardModule } from '@angular/material';
-import {MatDividerModule} from '@angular/material/divider';
+import { HomeSceneComponent } from './pages/home-scene/home-scene.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +58,8 @@ import {MatDividerModule} from '@angular/material/divider';
     CardAddReportButtonComponent,
     CardAddReportDetailComponent,
     CardAddReportTaskComponent,
-    CardComponent
+    CardComponent,
+    HomeSceneComponent
   ],
   imports: [
     BrowserModule,

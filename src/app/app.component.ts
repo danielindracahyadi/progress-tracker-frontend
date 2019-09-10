@@ -51,7 +51,7 @@ export class AppComponent {
     {
       dataDropdown : 'MacroAd',
     }
-  ]
+  ];
 
   @Output() dummyRoles = [
     {
@@ -69,10 +69,10 @@ export class AppComponent {
     {
       dataDropdown : 'UI / UX Designer',
     }
-  ]
+  ];
 
   date = new FormControl(moment());
-  month: string[]
+  month: string[];
 
   ngOnInit() {
   }
@@ -99,9 +99,6 @@ export class AppComponent {
       jobDesc: 'UI/UX Designer',
       project: ['Desain Blog', 'a','b'],
     }
-    ];
-
-  ngOnInit() {
-  }
+  ];
 
 }
