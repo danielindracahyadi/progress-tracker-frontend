@@ -42,7 +42,7 @@ export class AddReportComponent implements OnInit {
     const componentFactory = this.CFR.resolveComponentFactory(CardAddReportDropdownComponent);
     const componentRef: ComponentRef<CardAddReportDropdownComponent> = this.VCR.createComponent(componentFactory);
     const currentComponent = componentRef.instance;
-    componentRef.instance.a = [
+    componentRef.instance.projects = [
       {
         dataDropdown : 'Dinas Kesehatan',
       },
@@ -50,7 +50,7 @@ export class AddReportComponent implements OnInit {
         dataDropdown : 'MacroAd',
       }
     ];
-    componentRef.instance.b = [
+    componentRef.instance.roles = [
       {
         dataDropdown : 'Back End Engineer',
       },

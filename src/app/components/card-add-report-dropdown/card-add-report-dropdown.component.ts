@@ -28,8 +28,8 @@ export class CardAddReportDropdownComponent implements OnInit {
   projectName = '';
   rolesName = '';
 
-  a = [];
-  b = [];
+  projects = [];
+  roles = [];
 
   constructor(
     private appService: AppService,
@@ -38,13 +38,11 @@ export class CardAddReportDropdownComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log("a", this.a);
     this.dataProjectNameFinal = this.dataProjectName;
     this.dataRolesFinal = this.dataRoles;
-    if (this.a.length != 0 && this.b.length != 0){
-      console.log("masuk sini")
-      this.dataProjectNameFinal = this.a;
-      this.dataRolesFinal = this.b;
+    if (this.projects.length != 0 && this.roles.length != 0){
+      this.dataProjectNameFinal = this.projects;
+      this.dataRolesFinal = this.roles;
     }
   }
 }
