@@ -32,7 +32,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardAddReportTaskComponent } from './components/card-add-report-task/card-add-report-task.component';
 
 import { CardComponent } from './components/card/card.component';
-import { HomeSceneComponent } from './pages/home-scene/home-scene.component';
+import { HomeReportComponent } from './pages/home-report/home-report.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +59,7 @@ import { HomeSceneComponent } from './pages/home-scene/home-scene.component';
     CardAddReportDetailComponent,
     CardAddReportTaskComponent,
     CardComponent,
-    HomeSceneComponent
+    HomeReportComponent
   ],
   imports: [
     BrowserModule,
