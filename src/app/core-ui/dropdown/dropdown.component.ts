@@ -1,6 +1,6 @@
 import { AppService } from './../../app.service';
-import { Component,Input, OnInit, ViewEncapsulation, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 declare var angular: any;
 
 @Component({
