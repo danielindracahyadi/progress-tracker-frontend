@@ -94,7 +94,8 @@ import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.
     ModalDataAdminDeleteComponent,
     ButtonAdminComponent,
     MainDashboardComponent,
-    DropdownAdminComponent
+    DropdownAdminComponent,
+    MainDashboardComponent
   ],
   exports: [
     AppComponent,
