@@ -38,6 +38,9 @@ export class DropdownComponent implements OnInit {
     else if (this.function === "selectRolesName")
     {
       this.appService.setSelectedRolesName(this.selectedData);
+    }else if (this.function === "selectMainDashboardName")
+    {
+      this.appService.setSelectedMainDashboardName(this.selectedData);
     }
   }
 }
