@@ -5,8 +5,10 @@ import { Injectable, EventEmitter, Output } from '@angular/core';
 })
 export class AppService {
 
-  @Output() projectName:EventEmitter <any> = new EventEmitter();
-  @Output() rolesName:EventEmitter <any> = new EventEmitter();
+
+
+  @Output() projectName: EventEmitter <any> = new EventEmitter();
+  @Output() rolesName: EventEmitter <any> = new EventEmitter();
 
   private dummyProjectName =
   {

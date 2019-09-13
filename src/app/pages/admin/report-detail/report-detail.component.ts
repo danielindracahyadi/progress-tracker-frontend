@@ -6,11 +6,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./report-detail.component.sass']
 })
 export class AdminReportDetailComponent implements OnInit {
-  @Input() dataDummy = 'dataReportDetail';
+  @Input() dataDummy: any;
+  selectedData: any;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  change(data) {
+    this.selectedData = [data];
   }
 
 }

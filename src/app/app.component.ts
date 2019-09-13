@@ -66,92 +66,361 @@ export class AppComponent {
 
   @Output() dummyReportDetail = [
     {
-      user: 'Fian',
-      task: [
-         {
-            prog: '45', usta: 'Desain Dinas Blog Kesehatan',
-            deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-         },
-         {
+      role : 'UI/UX Designer',
+      workTotal : '4',
+      details: [
+        {
+          user: 'Fian',
+          task: [
+             {
+                prog: '45', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
+             },
+             {
 
-            prog: '98', usta: 'MacroAd',
-            deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
-         }
+                prog: '98', usta: 'MacroAd',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             }
+          ]
+        },
+        {
+          user: 'Daniel',
+          task: [
+             {
+                prog: '100', usta: 'Pendidikan Tematik',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             },
+             {
+                prog: '86', usta: 'MacroAd',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '56', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '29', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        },
+        {
+          user: 'Karel',
+          task: [
+             {
+                prog: '95', usta: 'MacroAd',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '85', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '88', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             }
+          ]
+        },
+        {
+          user: 'Febry',
+          task: [
+             {
+                prog: '65', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '75', usta: 'MacroAd',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             },
+             {
+                prog: '94', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '99', usta: 'MacroAd',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '76', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             }
+          ]
+        },
+        {
+          user: 'Sherly',
+          task: [
+             {
+                prog: '100', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        }
       ]
     },
     {
-      user: 'Daniel',
-      task: [
-         {
-            prog: '100', usta: 'Pendidikan Tematik',
-            deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
-         },
-         {
-            prog: '86', usta: 'MacroAd',
-            deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         },
-         {
-            prog: '56', usta: 'Desain Dinas Blog Kesehatan',
-            deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         },
-         {
-            prog: '29', usta: 'Desain Dinas Blog Kesehatan',
-            deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         }
+      role : 'Back-end Engineer',
+      workTotal : '193',
+      details: [
+        {
+          user: 'Fian',
+          task: [
+             {
+                prog: '45', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
+             }
+          ]
+        },
+        {
+          user: 'Daniel',
+          task: [
+             {
+                prog: '100', usta: 'Pendidikan Tematik',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             },
+             {
+                prog: '86', usta: 'MacroAd',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '56', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '29', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        },
+        {
+          user: 'Karel',
+          task: [
+             {
+                prog: '95', usta: 'MacroAd',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '85', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        },
+        {
+          user: 'Febry',
+          task: [
+             {
+                prog: '65', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '75', usta: 'MacroAd',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             },
+             {
+                prog: '94', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        },
+        {
+          user: 'Sherly',
+          task: []
+        }
       ]
     },
     {
-      user: 'Karel',
-      task: [
-         {
-            prog: '95', usta: 'MacroAd',
-            deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         },
-         {
-            prog: '85', usta: 'Desain Dinas Blog Kesehatan',
-            deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         },
-         {
-            prog: '88', usta: 'Desain Dinas Blog Kesehatan',
-            deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
-         }
+      role : 'Front-end Engineer',
+      workTotal : '88',
+      details: [
+        {
+          user: 'Fian',
+          task: [
+             {
+                prog: '45', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
+             },
+             {
+
+                prog: '98', usta: 'MacroAd',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             }
+          ]
+        },
+        {
+          user: 'Daniel',
+          task: []
+        },
+        {
+          user: 'Karel',
+          task: [
+             {
+                prog: '95', usta: 'MacroAd',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '85', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '88', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             }
+          ]
+        },
+        {
+          user: 'Febry',
+          task: [
+             {
+                prog: '65', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '75', usta: 'MacroAd',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             },
+             {
+                prog: '94', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '99', usta: 'MacroAd',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '76', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             }
+          ]
+        },
+        {
+          user: 'Sherly',
+          task: [
+             {
+                prog: '100', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        }
       ]
     },
     {
-      user: 'Febry',
-      task: [
-         {
-            prog: '65', usta: 'Desain Dinas Blog Kesehatan',
-            deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         },
-         {
-            prog: '75', usta: 'MacroAd',
-            deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
-         },
-         {
-            prog: '94', usta: 'Desain Dinas Blog Kesehatan',
-            deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         },
-         {
-            prog: '99', usta: 'MacroAd',
-            deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         },
-         {
-            prog: '76', usta: 'Desain Dinas Blog Kesehatan',
-            deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
-         }
+      role : 'Project Manager',
+      workTotal : '150',
+      details: [
+        {
+          user: 'Fian',
+          task: [
+             {
+                prog: '98', usta: 'MacroAd',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             }
+          ]
+        },
+        {
+          user: 'Daniel',
+          task: [
+             {
+                prog: '56', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '29', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        },
+        {
+          user: 'Karel',
+          task: [
+             {
+                prog: '88', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             }
+          ]
+        },
+        {
+          user: 'Febry',
+          task: [
+             {
+                prog: '94', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '99', usta: 'MacroAd',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             },
+             {
+                prog: '76', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             }
+          ]
+        },
+        {
+          user: 'Sherly',
+          task: [
+             {
+                prog: '100', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        }
       ]
     },
     {
-      user: 'Sherly',
-      task: [
-         {
-            prog: '100', usta: 'Desain Dinas Blog Kesehatan',
-            deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         }
+      role : 'QA Analyst',
+      workTotal : '174',
+      details: [
+        {
+          user: 'Fian',
+          task: []
+        },
+        {
+          user: 'Daniel',
+          task: [
+             {
+                prog: '100', usta: 'Pendidikan Tematik',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             },
+             {
+                prog: '29', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        },
+        {
+          user: 'Karel',
+          task: [
+             {
+                prog: '88', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             }
+          ]
+        },
+        {
+          user: 'Febry',
+          task: [
+             {
+                prog: '75', usta: 'MacroAd',
+                deta: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+             },
+             {
+                prog: '99', usta: 'MacroAd',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        },
+        {
+          user: 'Sherly',
+          task: [
+             {
+                prog: '100', usta: 'Desain Dinas Blog Kesehatan',
+                deta: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+             }
+          ]
+        }
       ]
     }
   ];
+
 
   @Output() dummyProjectName = [
     {
@@ -201,12 +470,12 @@ export class AppComponent {
     {
       title: 'Dinas Kesehatan',
       jobDesc: 'UI/UX Designer',
-      project: ['Desain Blog', 'a','b'],
+      project: ['Desain Blog', 'a', 'b'],
     },
     {
       title: 'Macroad Design System',
       jobDesc: 'UI/UX Designer',
-      project: ['Desain Blog', 'a','b'],
+      project: ['Desain Blog', 'a', 'b'],
     }
   ];
 
