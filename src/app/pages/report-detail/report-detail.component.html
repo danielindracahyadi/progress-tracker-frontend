@@ -42,27 +42,27 @@
 
         <mat-sidenav-content>
             <div *ngFor="let obj of selectedData">
-                    <div class="imagi">
-                        <div *ngFor="let tta of obj.task">
-                            <div class="nextnext">
-                                <mat-card class="caboria">
-                                    <div class="pesento space-between">
-                                        <mat-card-title>
-                                            <core-ui-text-view [text]="tta.usta" classtouse="bold"></core-ui-text-view>
-                                        </mat-card-title>
-                                        <div class="downer">
-                                            <mat-card-subtitle>
-                                                <core-ui-text-view [text]="tta.prog+'%'" classtouse="blue"></core-ui-text-view>
-                                            </mat-card-subtitle>
-                                        </div>
+                <div class="imagi">
+                    <div *ngFor="let tta of obj.task">
+                        <div class="nextnext">
+                            <mat-card class="caboria">
+                                <div class="pesento space-between">
+                                    <mat-card-title>
+                                        <core-ui-text-view [text]="tta.usta" classtouse="bold"></core-ui-text-view>
+                                    </mat-card-title>
+                                    <div class="downer">
+                                        <mat-card-subtitle>
+                                            <core-ui-text-view [text]="tta.prog+'%'" classtouse="blue"></core-ui-text-view>
+                                        </mat-card-subtitle>
                                     </div>
-                                    <mat-card-subtitle>
-                                        <core-ui-text-view [text]="tta.deta" classtouse="default" layout-wrap></core-ui-text-view>
-                                    </mat-card-subtitle>
-                                </mat-card>
-                            </div>
+                                </div>
+                                <mat-card-subtitle>
+                                    <core-ui-text-view [text]="tta.deta" classtouse="default" layout-wrap></core-ui-text-view>
+                                </mat-card-subtitle>
+                            </mat-card>
                         </div>
                     </div>
+                </div>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
