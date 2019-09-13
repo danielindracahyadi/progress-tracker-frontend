@@ -23,7 +23,6 @@ import { CheckBoxComponent } from './core-ui/check-box/check-box.component';
 import { Group1191Component } from './svg/group1191/group1191.component';
 import { Group1192Component } from './svg/group1192/group1192.component';
 import { UserReportDetailComponent } from './pages/report-detail/report-detail.component';
-import { CardReportTaskComponent } from './components/card-report-task/card-report-task.component';
 import { CardReportTitleComponent } from './components/card-report-title/card-report-title.component';
 import { AddReportComponent } from './pages/add-report/add-report.component';
 import { CardAddReportDropdownComponent } from './components/card-add-report-dropdown/card-add-report-dropdown.component';
@@ -36,9 +35,6 @@ import {MatListModule} from '@angular/material/list';
 import { CardComponent } from './components/card/card.component';
 import { HomeReportComponent } from './pages/home-report/home-report.component';
 import { Group1172Component } from './svg/group1172/group1172.component';
-import { CardReportTitleByProjectComponent } from './components/card-report-title-by-project/card-report-title-by-project.component';
-import { CardReportTaskAdminrdComponent } from './components/card-report-task-adminrd/card-report-task-adminrd.component';
-import { CardReportTaskUsernameComponent } from './components/card-report-task-username/card-report-task-username.component';
 import { AdminReportDetailComponent } from './pages/admin/report-detail/report-detail.component';
 
 @NgModule({
@@ -53,12 +49,9 @@ import { AdminReportDetailComponent } from './pages/admin/report-detail/report-d
     CheckBoxComponent,
     UserReportDetailComponent,
     CardReportTitleComponent,
-    CardReportTaskComponent,
     Group1191Component,
     Group1192Component,
     DatepickerComponent,
-    CardReportTaskComponent,
-    CardReportTitleComponent,
     AddReportComponent,
     CardAddReportDropdownComponent,
     CardAddReportButtonComponent,
@@ -68,10 +61,7 @@ import { AdminReportDetailComponent } from './pages/admin/report-detail/report-d
     HomeReportComponent,
     ExpansionTileComponent,
     AdminReportDetailComponent,
-    Group1172Component,
-    CardReportTitleByProjectComponent,
-    CardReportTaskAdminrdComponent,
-    CardReportTaskUsernameComponent
+    Group1172Component
   ],
   exports: [
     // CardAddReportTaskComponent,
