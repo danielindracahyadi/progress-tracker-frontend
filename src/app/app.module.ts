@@ -62,8 +62,7 @@ import { MainDashboardComponent } from './pages/admin/main-dashboard/main-dashbo
     ExpansionTileComponent,
     AdminReportDetailComponent,
     Group1172Component,
-    MainDashboardComponent,
-    DropdownAdminComponent
+    MainDashboardComponent
   ],
   exports: [
     // CardAddReportTaskComponent,
