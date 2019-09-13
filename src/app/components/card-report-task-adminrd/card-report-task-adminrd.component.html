@@ -1,0 +1,17 @@
+<mat-card *ngFor="let obj of finalData" class="cabor">
+<!-- <mat-card ng-repeat="obj in finalData | unique: role" class="cabor"> -->
+    <div class="minmarg1">
+        <div class='beinline-left'>
+                <svg-group1172></svg-group1172>
+        </div>
+        <div class='beinline-right'>
+            <mat-card-title>
+                <core-ui-text-view [text]="obj.role" classtouse="bold"></core-ui-text-view>
+            </mat-card-title>
+        </div>
+    </div>
+    <br>
+    <mat-card-subtitle>
+            <core-ui-text-view [text]="'Kamu sudah melakukan ' + obj.workTotal + ' pekerjaan pada project ini'" classtouse="blue"></core-ui-text-view>
+    </mat-card-subtitle>
+</mat-card>

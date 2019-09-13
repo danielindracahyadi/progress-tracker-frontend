@@ -1,0 +1,118 @@
+<!-- <div *ngFor="let obj of finalData">
+    <p>hai {{obj.user}}</p>
+        <div *ngFor="let tta of obj.task">
+            <p>{{tta.prog}}</p>
+            <p>{{tta.usta}}</p>
+            <p>{{tta.deta}}</p>
+        </div>
+</div> -->
+
+<div *ngFor="let obj of finalData">
+    <div class="closer">
+        <mat-card-title>
+            <core-ui-text-view [text]="obj.user" classtouse="bold"></core-ui-text-view>
+        </mat-card-title>
+    </div>
+    <div class="imagi">
+        <div *ngFor="let tta of obj.task">
+            <div class="nextnext">
+                <mat-card class="cabor">
+                    <div class="pesento space-between">
+                        <mat-card-title>
+                            <core-ui-text-view [text]="tta.usta" classtouse="bold"></core-ui-text-view>
+                        </mat-card-title>
+                        <div class="downer">
+                            <mat-card-subtitle>
+                                <core-ui-text-view [text]="tta.prog+'%'" classtouse="blue"></core-ui-text-view>
+                            </mat-card-subtitle>
+                        </div>
+                    </div>
+                    <mat-card-subtitle>
+                            <core-ui-text-view [text]="tta.deta" classtouse="default"></core-ui-text-view>
+                    </mat-card-subtitle>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+</div>
+
+<!-- <div *ngFor="let obj of finalData">
+    <div class="closer">
+        <mat-card-title>
+            <core-ui-text-view [text]="obj.user" classtouse="bold"></core-ui-text-view>
+        </mat-card-title>
+    </div>
+
+    <div class="imagi">
+        <div class="nextnext">
+                <mat-card class="cabor">
+                        <div class="pesento space-between">
+                            <mat-card-title>
+                                <core-ui-text-view text="Desain Blog Dinas Kesehatan" classtouse="bold"></core-ui-text-view>
+                            </mat-card-title>
+                            <div class="downer">
+                                <mat-card-subtitle>
+                                    <core-ui-text-view text="100%" classtouse="blue"></core-ui-text-view>
+                                </mat-card-subtitle>
+                            </div>
+                        </div>
+                        <mat-card-subtitle>
+                                <core-ui-text-view text="Bikin Homepage, blog, gallery dan sebagainya pokoknya lengkap deh" classtouse="default"></core-ui-text-view>
+                        </mat-card-subtitle>
+                    </mat-card>
+        </div>
+        <div class="nextnext">
+                <mat-card class="cabor">
+                        <div class="pesento space-between">
+                            <mat-card-title>
+                                <core-ui-text-view text="Desain Blog Dinas Kesehatan" classtouse="bold"></core-ui-text-view>
+                            </mat-card-title>
+                            <div class="downer">
+                                <mat-card-subtitle>
+                                    <core-ui-text-view text="100%" classtouse="blue"></core-ui-text-view>
+                                </mat-card-subtitle>
+                            </div>
+                        </div>
+                        <mat-card-subtitle>
+                                <core-ui-text-view text="Bikin Homepage, blog, gallery dan sebagainya pokoknya lengkap deh" classtouse="default"></core-ui-text-view>
+                        </mat-card-subtitle>
+                    </mat-card>
+        </div>
+        <div class="nextnext">
+                <mat-card class="cabor">
+                        <div class="pesento space-between">
+                            <mat-card-title>
+                                <core-ui-text-view text="Desain Blog Dinas Kesehatan" classtouse="bold"></core-ui-text-view>
+                            </mat-card-title>
+                            <div class="downer">
+                                <mat-card-subtitle>
+                                    <core-ui-text-view text="100%" classtouse="blue"></core-ui-text-view>
+                                </mat-card-subtitle>
+                            </div>
+                        </div>
+                        <mat-card-subtitle>
+                                <core-ui-text-view text="Bikin Homepage, blog, gallery dan sebagainya pokoknya lengkap deh" classtouse="default"></core-ui-text-view>
+                        </mat-card-subtitle>
+                    </mat-card>
+        </div>
+        <div class="nextnext">
+                <mat-card class="cabor">
+                        <div class="pesento space-between">
+                            <mat-card-title>
+                                <core-ui-text-view text="Desain Blog Dinas Kesehatan" classtouse="bold"></core-ui-text-view>
+                            </mat-card-title>
+                            <div class="downer">
+                                <mat-card-subtitle>
+                                    <core-ui-text-view text="100%" classtouse="blue"></core-ui-text-view>
+                                </mat-card-subtitle>
+                            </div>
+                        </div>
+                        <mat-card-subtitle>
+                                <core-ui-text-view text="Bikin Homepage, blog, gallery dan sebagainya pokoknya lengkap deh" classtouse="default"></core-ui-text-view>
+                        </mat-card-subtitle>
+                    </mat-card>
+        </div>
+    </div>
+<mat-divider></mat-divider>
+</div> -->

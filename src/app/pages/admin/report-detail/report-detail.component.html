@@ -1,0 +1,13 @@
+<div style="position:absolute; top:0; bottom:0; left:0; right: 0; display: flex; flex-direction: column;">
+    <mat-sidenav-container style="flex: 1">
+        <mat-sidenav mode="side" opened="true">
+            <components-card-report-title-by-project></components-card-report-title-by-project>
+
+            <components-card-report-task-adminrd [data]="dataDummy"></components-card-report-task-adminrd>
+
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <components-card-report-task-username [data]="dataDummy"></components-card-report-task-username>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
