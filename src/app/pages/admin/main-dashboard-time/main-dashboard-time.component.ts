@@ -194,8 +194,15 @@ export class MainDashboardTimeComponent implements OnInit {
    }
  ];
 
+ onClick(){
+    console.log("Card id Clicked!");
+ }
+
   constructor() { }
 
+  consoleTimeline(i){
+   console.log(this.dummyMainDashboardTime[i]);
+  }
   ngOnInit() {
   }
   change(data) {

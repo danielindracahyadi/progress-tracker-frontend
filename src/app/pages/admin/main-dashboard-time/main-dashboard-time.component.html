@@ -20,7 +20,7 @@
         </div>
 
         <div class="date">
-            <mat-card *ngFor="let dummy of dummyMainDashboardTime" class="cabor">
+            <mat-card *ngFor="let dummy of dummyMainDashboardTime" (click)="onClick()" class="cabor">
                 <mat-card-header>
                     <mat-card-title class="title">{{ dummy.date }}</mat-card-title>
                 </mat-card-header>
