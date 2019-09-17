@@ -15,7 +15,7 @@ export class HomeReportComponent implements OnInit {
     private router: Router,
   ) { }
 
-  dataHome = [];
+  dataHome = {};
 
   ngOnInit() {
     this.dataHome = this.appService.getHomeData();

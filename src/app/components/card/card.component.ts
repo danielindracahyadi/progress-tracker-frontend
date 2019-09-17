@@ -8,24 +8,20 @@ import moment from 'moment';
   styleUrls: ['./card.component.sass']
 })
 
-@Component({
-  selector: 'component-cards',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.sass']
-})
-
 export class CardComponent implements OnInit {
   @Input() data = [];
-  @Input() dataHome = [];
+  @Input() dataHome: any = {};
 
   constructor() { }
 
   ngOnInit() {
-    for(var q = 0; q< this.dataHome[0].data.length; q++)
+    const count = this.dataHome.data.length;
+
+    for(let q = 0; q< count; q++)
     {
-      var testDate = this.dataHome[0].data[q].reportDate;
+      let testDate = this.dataHome.data[q].reportDate;
       let finalDate = moment(testDate).format('dddd, DD MMMM YYYY');
-      this.dataHome[0].data[q].reportDate = finalDate;
+      this.dataHome.data[q].reportDate = finalDate;
     }
   }
 }
