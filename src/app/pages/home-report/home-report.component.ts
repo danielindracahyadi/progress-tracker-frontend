@@ -14,10 +14,13 @@ export class HomeReportComponent implements OnInit {
     private activatedRoutes: ActivatedRoute,
     private router: Router,
   ) { }
+<<<<<<< HEAD
 
   dataHome = {};
+=======
+>>>>>>> update homeData to services
 
-  @Input() dataHome = '';
+  dataHome = [];
 
   ngOnInit() {
     this.dataHome = this.appService.getHomeData();
