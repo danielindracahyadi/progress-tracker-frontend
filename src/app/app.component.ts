@@ -601,7 +601,6 @@ export class AppComponent {
      ]
    }
   ];
-   
   @Output() homeData =
   [
      {
