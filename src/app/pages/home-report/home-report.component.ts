@@ -12,7 +12,6 @@ export class HomeReportComponent implements OnInit {
   @Input() dataHome = '';
 
   ngOnInit() {
-    // console.log(this.dataHome);
   }
 
 }
