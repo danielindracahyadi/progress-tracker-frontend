@@ -1,4 +1,6 @@
+import { AppService } from './../../app.service';
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'page-home-report',
@@ -7,11 +9,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomeReportComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private appService: AppService,
+    private activatedRoutes: ActivatedRoute,
+    private router: Router,
+  ) { }
 
-  @Input() dataHome = '';
+  dataHome = [];
 
   ngOnInit() {
+    this.dataHome = this.appService.getHomeData();
   }
 
 }
