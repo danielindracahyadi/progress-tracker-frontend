@@ -17,6 +17,8 @@ export class HomeReportComponent implements OnInit {
 
   dataHome = {};
 
+  @Input() dataHome = '';
+
   ngOnInit() {
     this.dataHome = this.appService.getHomeData();
   }
