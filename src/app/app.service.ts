@@ -81,7 +81,6 @@ export class AppService {
   };
 
   private homeData =
-  [
     {
        success: true,
        data:
@@ -310,8 +309,7 @@ export class AppService {
          }
       ],
       message: 'Berhasil fetch HOME',
-   }
-];
+   };
 
   getHomeData(){
     return this.homeData;

@@ -8,15 +8,12 @@ import moment from 'moment';
   styleUrls: ['./card.component.sass']
 })
 
-<<<<<<< HEAD
-=======
 @Component({
   selector: 'component-cards',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.sass']
 })
 
->>>>>>> update homeData to services
 export class CardComponent implements OnInit {
   @Input() data = [];
   @Input() dataHome: any = {};
@@ -30,11 +27,9 @@ export class CardComponent implements OnInit {
     {
       let testDate = this.dataHome.data[q].reportDate;
       let finalDate = moment(testDate).format('dddd, DD MMMM YYYY');
-<<<<<<< HEAD
       this.dataHome.data[q].reportDate = finalDate;
-=======
       this.dataHome[0].data[q].reportDate = finalDate;
->>>>>>> update homeData to services
+      this.dataHome.data[q].reportDate = finalDate;
     }
   }
 }
