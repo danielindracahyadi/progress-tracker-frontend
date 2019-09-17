@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'page-home-report',
@@ -9,7 +9,10 @@ export class HomeReportComponent implements OnInit {
 
   constructor() { }
 
+  @Input() dataHome = '';
+
   ngOnInit() {
+    // console.log(this.dataHome);
   }
 
 }

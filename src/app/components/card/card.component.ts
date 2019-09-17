@@ -1,5 +1,6 @@
 import { Component, OnInit, NgModule, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material';
+import moment from 'moment';
 
 
 @Component({
@@ -9,13 +10,17 @@ import { MatCardModule } from '@angular/material';
 })
 export class CardComponent implements OnInit {
   @Input() data = [];
+  @Input() dataHome = [];
+
   constructor() { }
 
   ngOnInit() {
-    const asd = 'lasglsalasl';
-
-
-
+    for(var q = 0; q< this.dataHome[0].data.length; q++)
+    {
+      var testDate = this.dataHome[0].data[q].reportDate;
+      let finalDate = moment(testDate).format('dddd, DD MMMM YYYY');
+      this.dataHome[0].data[q].reportDate = finalDate
+    }
   }
 
 }
