@@ -20,16 +20,16 @@
         </div>
 
         <div class="date">
-            <mat-card *ngFor="let dummy of dummyMainDashboardTime" (click)="onClick()" class="cabor">
+            <mat-card *ngFor="let timeline of timelines" (click)="onClick()" class="cabor">
                 <mat-card-header>
-                    <mat-card-title class="title">{{ dummy.date }}</mat-card-title>
+                    <mat-card-title class="title">{{ timeline.date | date:'fullDate'}}</mat-card-title>
                 </mat-card-header>
                 <hr />
-                <mat-card-content class="content" *ngFor="let project of dummy.projects">
-                    {{project.project}}
+                <mat-card-content class="content" *ngFor="let project of timeline.projects">
+                    {{project}}
                 </mat-card-content>
                 <div class="content">
-                    {{'+' +  dummy.otherProjects + ' Role lainnya' }}
+                    {{'+' +  timeline.otherProjects + ' Role lainnya' }}
                 </div>
             </mat-card>
         </div>
