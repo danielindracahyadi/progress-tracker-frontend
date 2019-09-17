@@ -13,7 +13,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatRippleModule, MatInputModule, MatCardModule, MatDividerModule,
-  MatExpansionModule, MatSelectModule, MatSidenavModule } from '@angular/material';
+  MatExpansionModule, MatSelectModule, MatSidenavModule, MatDialogModule } from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatIconModule } from '@angular/material/icon';
 import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
@@ -38,7 +38,16 @@ import { AdminReportDetailComponent } from './pages/admin/report-detail/report-d
 import { MainDashboardComponent } from './pages/admin/main-dashboard/main-dashboard.component';
 import { MainDashboardTimeComponent } from './pages/admin/main-dashboard-time/main-dashboard-time.component';
 import { Group1286Component } from './svg/group1286/group1286.component';
-import { LoginAdminComponent } from './pages/admin/login-admin/login-admin.component'; 
+import { LoginAdminComponent } from './pages/admin/login-admin/login-admin.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { Group1226Component } from './svg/group1226/group1226.component';
+import { Group1225Component } from './svg/group1225/group1225.component';
+import { ModalDataUserSubmitComponent } from './components/modal/modal-data-user-submit/modal-data-user-submit.component';
+import { ModalDataUserDeleteComponent } from './components/modal/modal-data-user-delete/modal-data-user-delete.component';
+import { ModalDataUserConfirmationComponent } from './components/modal/modal-data-user-confirmation/modal-data-user-confirmation.component';
+import { Group1227Component } from './svg/group1227/group1227.component';
+import { ModalDataAddComponent } from './components/modal/modal-data-add/modal-data-add.component';
+import { ModalDataEditComponent } from './components/modal/modal-data-edit/modal-data-edit.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +63,9 @@ import { LoginAdminComponent } from './pages/admin/login-admin/login-admin.compo
     CardReportTitleComponent,
     Group1191Component,
     Group1192Component,
+    Group1225Component,
+    Group1226Component,
+    Group1227Component,
     DatepickerComponent,
     AddReportComponent,
     CardAddReportDropdownComponent,
@@ -75,7 +87,13 @@ import { LoginAdminComponent } from './pages/admin/login-admin/login-admin.compo
   ],
   entryComponents:
   [
-    CardAddReportDropdownComponent
+    CardAddReportDropdownComponent,
+    ModalComponent,
+    ModalDataUserSubmitComponent,
+    ModalDataUserDeleteComponent,
+    ModalDataUserConfirmationComponent,
+    ModalDataAddComponent,
+    ModalDataEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -100,8 +118,9 @@ import { LoginAdminComponent } from './pages/admin/login-admin/login-admin.compo
     MatSidenavModule
   ],
   providers: [
-
+    MatDialogModule
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
