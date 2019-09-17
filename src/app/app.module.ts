@@ -46,8 +46,9 @@ import { ModalDataUserSubmitComponent } from './components/modal/modal-data-user
 import { ModalDataUserDeleteComponent } from './components/modal/modal-data-user-delete/modal-data-user-delete.component';
 import { ModalDataUserConfirmationComponent } from './components/modal/modal-data-user-confirmation/modal-data-user-confirmation.component';
 import { Group1227Component } from './svg/group1227/group1227.component';
-import { ModalDataAddComponent } from './components/modal/modal-data-add/modal-data-add.component';
-import { ModalDataEditComponent } from './components/modal/modal-data-edit/modal-data-edit.component';
+import { ModalDataAdminAddComponent } from './components/modal/modal-data-admin-add/modal-data-admin-add.component';
+import { ModalDataAdminEditComponent } from './components/modal/modal-data-admin-edit/modal-data-admin-edit.component';
+import { ModalDataAdminDeleteComponent } from './components/modal/modal-data-admin-delete/modal-data-admin-delete.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +95,10 @@ import { ModalDataEditComponent } from './components/modal/modal-data-edit/modal
     ModalDataUserConfirmationComponent,
     ModalDataAddComponent,
     ModalDataEditComponent,
+    Group1227Component,
+    ModalDataAdminAddComponent,
+    ModalDataAdminEditComponent,
+    ModalDataAdminDeleteComponent,
   ],
   imports: [
     BrowserModule,
