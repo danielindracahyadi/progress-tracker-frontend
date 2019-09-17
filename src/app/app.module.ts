@@ -13,7 +13,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatRippleModule, MatInputModule, MatCardModule, MatDividerModule,
-  MatExpansionModule, MatSelectModule, MatSidenavModule } from '@angular/material';
+  MatExpansionModule, MatSelectModule, MatSidenavModule, MatListModule } from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatIconModule } from '@angular/material/icon';
 import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
@@ -29,14 +29,16 @@ import { CardAddReportButtonComponent } from './components/card-add-report-butto
 import { CardAddReportDetailComponent } from './components/card-add-report-detail/card-add-report-detail.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardAddReportTaskComponent } from './components/card-add-report-task/card-add-report-task.component';
-import { ExpansionTileComponent } from './core-ui/expansion-tile/expansion-tile.component';
-import {MatListModule} from '@angular/material/list';
-import { CardComponent } from './components/card/card.component';
-import { HomeReportComponent } from './pages/home-report/home-report.component';
-import { Group1172Component } from './svg/group1172/group1172.component';
-import { AdminReportDetailComponent } from './pages/admin/report-detail/report-detail.component';
-import { MainDashboardComponent } from './pages/admin/main-dashboard/main-dashboard.component';
-import { MainDashboardTimeComponent } from './pages/admin/main-dashboard-time/main-dashboard-time.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { Group1226Component } from './svg/group1226/group1226.component';
+import { Group1225Component } from './svg/group1225/group1225.component';
+import { ModalDataUserSubmitComponent } from './components/modal/modal-data-user-submit/modal-data-user-submit.component';
+import { ModalDataUserDeleteComponent } from './components/modal/modal-data-user-delete/modal-data-user-delete.component';
+import { ModalDataUserConfirmationComponent } from './components/modal/modal-data-user-confirmation/modal-data-user-confirmation.component';
+import { Group1227Component } from './svg/group1227/group1227.component';
+import { ModalDataAdminAddComponent } from './components/modal/modal-data-admin-add/modal-data-admin-add.component';
+import { ModalDataAdminEditComponent } from './components/modal/modal-data-admin-edit/modal-data-admin-edit.component';
+import { ModalDataAdminDeleteComponent } from './components/modal/modal-data-admin-delete/modal-data-admin-delete.component';
 
 @NgModule({
   declarations: [
@@ -58,20 +60,16 @@ import { MainDashboardTimeComponent } from './pages/admin/main-dashboard-time/ma
     CardAddReportButtonComponent,
     CardAddReportDetailComponent,
     CardAddReportTaskComponent,
-    CardComponent,
-    HomeReportComponent,
-    ExpansionTileComponent,
-    AdminReportDetailComponent,
-    Group1172Component,
-    MainDashboardComponent,
-    MainDashboardTimeComponent
-  ],
-  exports: [
-    // CardAddReportTaskComponent,
-  ],
-  entryComponents:
-  [
-    CardAddReportDropdownComponent
+    ModalComponent,
+    ModalDataUserSubmitComponent,
+    ModalDataUserDeleteComponent,
+    Group1226Component,
+    ModalDataUserConfirmationComponent,
+    Group1227Component,
+    Group1225Component,
+    ModalDataAdminAddComponent,
+    ModalDataAdminEditComponent,
+    ModalDataAdminDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -95,7 +93,13 @@ import { MainDashboardTimeComponent } from './pages/admin/main-dashboard-time/ma
     MatSelectModule,
     MatSidenavModule
   ],
-  providers: [
+  entryComponents: [
+    ModalDataUserSubmitComponent,
+    ModalDataUserDeleteComponent,
+    ModalDataUserConfirmationComponent,
+    ModalDataAdminAddComponent,
+    ModalDataAdminEditComponent,
+    ModalDataAdminDeleteComponent
 
   ],
   bootstrap: [AppComponent]
