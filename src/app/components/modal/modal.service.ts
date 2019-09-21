@@ -5,14 +5,22 @@ import { _fixedSizeVirtualScrollStrategyFactory } from '@angular/cdk/scrolling';
   providedIn: 'root'
 })
 export class ModalService {
+  user = '';
   category = '';
 
   constructor() { }
 
-  setCategory(category){
+  setUser(user: string)  {
+    this.user = user;
+  }
+  getUser() {
+    return this.user;
+  }
+
+  setCategory(category: string)  {
     this.category = category;
   }
-  getCategory(){
+  getCategory() {
     return this.category;
   }
 }

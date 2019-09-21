@@ -16,7 +16,8 @@ export class ModalComponent {
 
   constructor(public dialog: MatDialog, public modalService: ModalService) {}
 
-  openDialogUserSubmit(): void {
+  openDialogUserSubmit(user: string): void {
+    this.modalService.setUser(user);
     const dialogRef = this.dialog.open(ModalDataUserSubmitComponent, {
       width: '320px',
       height: '400px'
@@ -25,9 +26,12 @@ export class ModalComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+
+
   }
 
-  openDialogUserDelete(): void {
+  openDialogUserDelete(user: string): void {
+    this.modalService.setUser(user);
     const dialogRef = this.dialog.open(ModalDataUserDeleteComponent, {
       width: '320px',
       height: '400px'
@@ -38,7 +42,8 @@ export class ModalComponent {
     });
   }
 
-  openDialogUserConfirmation(): void {
+  openDialogUserConfirmation(user: string): void {
+    this.modalService.setUser(user);
     const dialogRef = this.dialog.open(ModalDataUserConfirmationComponent, {
       width: '320px',
       height: '308px'
@@ -71,7 +76,8 @@ export class ModalComponent {
     });
   }
 
-  openDialogAdminDelete(category: string): void {
+  openDialogAdminDelete(user: string, category: string): void {
+    this.modalService.setUser(user);
     this.modalService.setCategory(category);
     const dialogRef = this.dialog.open(ModalDataAdminDeleteComponent, {
       width: '320px',
