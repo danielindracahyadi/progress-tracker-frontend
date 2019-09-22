@@ -49,12 +49,30 @@ export class AppService {
     data: [
       {
         dataDropdown : 'Project',
-      },
-      {
-        dataDropdown : 'User',
+        det: [
+            {name: '1'},
+            {name: '2'},
+            {name: '3'}
+        ]
       },
       {
         dataDropdown : 'Role',
+        det: [
+            {name: 'A'},
+            {name: 'B'},
+            {name: 'C'},
+            {name: 'D'}
+        ]
+      },
+      {
+        dataDropdown : 'User',
+        det: [
+            {name: 'A1'},
+            {name: 'B2'},
+            {name: 'C3'},
+            {name: 'D4'},
+            {name: 'E5'}
+        ]
       }
     ],
     selected: ''
@@ -145,7 +163,7 @@ export class AppService {
                {
                   projectName: 'DLL',
                   roleName: 'Role Lain',
-                  task: 
+                  task:
                   [
                      {
                         taskName: 'Desain Dashboard Element',
@@ -164,7 +182,7 @@ export class AppService {
                {
                   projectName: 'DLL',
                   roleName: 'Role Lain',
-                  task: 
+                  task:
                   [
                      {
                         taskName: 'Desain Dashboard Element',
@@ -250,7 +268,7 @@ export class AppService {
                {
                   projectName: 'DLL',
                   roleName: 'Role Lain',
-                  task: 
+                  task:
                   [
                      {
                         taskName: 'Desain Dashboard Element',
@@ -269,7 +287,7 @@ export class AppService {
                {
                   projectName: 'DLL',
                   roleName: 'Role Lain',
-                  task: 
+                  task:
                   [
                      {
                         taskName: 'Desain Dashboard Element',
@@ -294,7 +312,7 @@ export class AppService {
   getHomeData(){
     return this.homeData;
   }
-  
+
   getDropdownProjectName() {
     return this.dummyProjectName;
   }
