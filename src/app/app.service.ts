@@ -50,28 +50,30 @@ export class AppService {
       {
         dataDropdown : 'Project',
         det: [
-            {name: '1'},
-            {name: '2'},
-            {name: '3'}
+            {name: 'Dinas Kesehatan'},
+            {name: 'MacroAd'},
+            {name: 'Sistem Tematik'}
         ]
       },
       {
         dataDropdown : 'Role',
         det: [
-            {name: 'A'},
-            {name: 'B'},
-            {name: 'C'},
-            {name: 'D'}
+            {name: 'Back End Engineer'},
+            {name: 'Front End Engineer'},
+            {name: 'Project Manager'},
+            {name: 'QA Analyst'},
+            {name: 'UI / UX Designer'}
         ]
       },
       {
         dataDropdown : 'User',
         det: [
-            {name: 'A1'},
-            {name: 'B2'},
-            {name: 'C3'},
-            {name: 'D4'},
-            {name: 'E5'}
+            {name: 'Karel'},
+            {name: 'Fian'},
+            {name: 'Sherly'},
+            {name: 'Febry'},
+            {name: 'Daniel'},
+            {name: 'Rezkhi'}
         ]
       }
     ],
