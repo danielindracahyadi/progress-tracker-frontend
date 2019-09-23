@@ -1,4 +1,9 @@
 import { Injectable, EventEmitter, Output } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -99,5 +104,14 @@ export class AppService {
     this.mainDashboardName.emit(selectedMainDashboardName);
   }
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
+
+  url = 'https://nameless-cove-75161.herokuapp.com/api/auth/sign-in?';
+
+  login(userName : string, password: string){
+      const data = 'username=' + userName + '&password=' + password ;
+      const reqHeader = new HttpHeaders({});
+      return this.http.post(this.url, data, {headers: reqHeader});
+  }
+
 }
