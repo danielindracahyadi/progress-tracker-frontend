@@ -5,9 +5,11 @@
             placeholder="Project" classtouse="bluewhite"
             style="position: absolute; top: 15px; left: 40px;">
         </core-ui-dropdown>
-        <form class="placer">
-            <input type="text" name="search" placeholder="Cari project">
+        <form (submit)="onSubmit(search.value)" class="placer" >
+            <input type="text" #search placeholder="Cari project" onfocus="this.value=''" >
         </form>
+
+
     </div>
     <div class="beinline-right">
         <core-ui-button text="Export csv" classtouse="btn-tosca btn-free-homelittle"></core-ui-button>&nbsp;&nbsp;
@@ -18,21 +20,21 @@
 <div class="kiddie">
     <div *ngIf="showDetailProject">
         <div *ngFor="let obj of dataMainDashboard[0].det">
-            <div class="dropdown">
+            <div class="dropdown bondro1">
                 <core-ui-expansion-tile [text]="obj.name"></core-ui-expansion-tile>
             </div>
         </div>
     </div>
     <div *ngIf="showDetailRole">
         <div *ngFor="let obj of dataMainDashboard[1].det">
-            <div class="dropdown">
+            <div class="dropdown bondro1">
                 <core-ui-expansion-tile [text]="obj.name"></core-ui-expansion-tile>
             </div>
         </div>
     </div>
     <div *ngIf="showDetailUser">
         <div *ngFor="let obj of dataMainDashboard[2].det">
-            <div class="dropdown">
+            <div class="dropdown bondro2">
                 <core-ui-expansion-tile [text]="obj.name"></core-ui-expansion-tile>
             </div>
         </div>
