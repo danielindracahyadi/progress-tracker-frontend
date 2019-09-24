@@ -9,7 +9,7 @@ import { ModalDataAdminDeleteComponent } from './modal-data-admin-delete/modal-d
 import { ModalService } from './modal.service';
 
 @Component({
-  selector: 'components-modal',
+  selector: 'component-modal',
   templateUrl: './modal.component.html',
 })
 export class ModalComponent {
