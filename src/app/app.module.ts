@@ -78,7 +78,15 @@ import { ButtonAdminComponent } from './core-ui/button-admin/button-admin.compon
     AdminReportDetailComponent,
     Group1172Component,
     MainDashboardComponent,
-    MainDashboardTimeComponent
+    MainDashboardTimeComponent,
+    ModalComponent,
+    ModalDataUserSubmitComponent,
+    ModalDataUserDeleteComponent,
+    ModalDataUserConfirmationComponent,
+    ModalDataAdminAddComponent,
+    ModalDataAdminEditComponent,
+    ModalDataAdminDeleteComponent,
+    ButtonAdminComponent,
   ],
   exports: [
     // CardAddReportTaskComponent,
@@ -86,13 +94,9 @@ import { ButtonAdminComponent } from './core-ui/button-admin/button-admin.compon
   entryComponents:
   [
     CardAddReportDropdownComponent,
-    ModalComponent,
     ModalDataUserSubmitComponent,
     ModalDataUserDeleteComponent,
     ModalDataUserConfirmationComponent,
-    ModalDataAddComponent,
-    ModalDataEditComponent,
-    Group1227Component,
     ModalDataAdminAddComponent,
     ModalDataAdminEditComponent,
     ModalDataAdminDeleteComponent,
