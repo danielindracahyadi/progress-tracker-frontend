@@ -37,17 +37,14 @@ export class MainDashboardComponent implements OnInit {
     this._translateService.mainDashboardName.subscribe(
       () => {
         if (this.appService.getSelectedMainDashboardName() === 'Project') {
-          console.log('', this.appService.getSelectedMainDashboardName() )
           this.showDetailProject = true;
           this.showDetailRole = false;
           this.showDetailUser = false;
         } else if (this.appService.getSelectedMainDashboardName() === 'Role') {
-          console.log('', this.appService.getSelectedMainDashboardName() )
           this.showDetailRole = true;
           this.showDetailProject = false;
           this.showDetailUser = false;
         } else if (this.appService.getSelectedMainDashboardName() === 'User') {
-          console.log('', this.appService.getSelectedMainDashboardName() )
           this.showDetailUser = true;
           this.showDetailRole = false;
           this.showDetailProject = false;
