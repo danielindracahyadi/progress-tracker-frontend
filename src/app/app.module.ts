@@ -47,6 +47,7 @@ import { Group1227Component } from './svg/group1227/group1227.component';
 import { ModalDataAdminAddComponent } from './components/modal/modal-data-admin-add/modal-data-admin-add.component';
 import { ModalDataAdminEditComponent } from './components/modal/modal-data-admin-edit/modal-data-admin-edit.component';
 import { ModalDataAdminDeleteComponent } from './components/modal/modal-data-admin-delete/modal-data-admin-delete.component';
+import { ButtonAdminComponent } from './core-ui/button-admin/button-admin.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { ModalDataAdminDeleteComponent } from './components/modal/modal-data-adm
     ModalDataAdminAddComponent,
     ModalDataAdminEditComponent,
     ModalDataAdminDeleteComponent,
+    ButtonAdminComponent,
   ],
   imports: [
     BrowserModule,
