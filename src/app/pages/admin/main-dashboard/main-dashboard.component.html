@@ -19,21 +19,21 @@
 
 <div class="kiddie">
     <div *ngIf="showDetailProject">
-        <div *ngFor="let obj of dataMainDashboard[0].det">
+        <div *ngFor="let obj of dataMainDashboard[0].detail">
             <div class="dropdown bondro1">
                 <core-ui-expansion-tile [text]="obj.name"></core-ui-expansion-tile>
             </div>
         </div>
     </div>
     <div *ngIf="showDetailRole">
-        <div *ngFor="let obj of dataMainDashboard[1].det">
+        <div *ngFor="let obj of dataMainDashboard[1].detail">
             <div class="dropdown bondro1">
                 <core-ui-expansion-tile [text]="obj.name"></core-ui-expansion-tile>
             </div>
         </div>
     </div>
     <div *ngIf="showDetailUser">
-        <div *ngFor="let obj of dataMainDashboard[2].det">
+        <div *ngFor="let obj of dataMainDashboard[2].detail">
             <div class="dropdown bondro2">
                 <core-ui-expansion-tile [text]="obj.name"></core-ui-expansion-tile>
             </div>

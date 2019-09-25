@@ -7,10 +7,10 @@ import { AppService } from './../../app.service';
   styleUrls: ['./expansion-tile.component.sass']
 })
 export class ExpansionTileComponent implements OnInit {
-  showET = true;
-  showP = true;
-  showR = false;
-  showU = false;
+  showLihatDetailRole = true;
+  showProject = true;
+  showReport = false;
+  showUser = false;
 
   @Input() text = '';
   constructor(
@@ -20,20 +20,20 @@ export class ExpansionTileComponent implements OnInit {
   ngOnInit() {
 
     if (this.appService.getSelectedMainDashboardName() === 'User') {
-      this.showET = false;
-      this.showP = false;
-      this.showR = false;
-      this.showU = true;
+      this.showLihatDetailRole = false;
+      this.showProject = false;
+      this.showReport = false;
+      this.showUser = true;
     }
     if (this.appService.getSelectedMainDashboardName() === 'Project') {
-      this.showP = true;
-      this.showR = false;
-      this.showU = false;
+      this.showProject = true;
+      this.showReport = false;
+      this.showUser = false;
     }
     if (this.appService.getSelectedMainDashboardName() === 'Role') {
-      this.showP = false;
-      this.showR = true;
-      this.showU = false;
+      this.showProject = false;
+      this.showReport = true;
+      this.showUser = false;
     }
   }
 

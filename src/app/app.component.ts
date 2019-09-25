@@ -573,7 +573,7 @@ export class AppComponent {
   @Output() dummyMainDashboard = [
    {
      dataDropdown : 'Project',
-     det: [
+     detail: [
          {name: 'Dinas Kesehatan'},
          {name: 'MacroAd'},
          {name: 'Sistem Tematik'}
@@ -581,7 +581,7 @@ export class AppComponent {
    },
    {
      dataDropdown : 'Role',
-     det: [
+     detail: [
          {name: 'Back End Engineer'},
          {name: 'Front End Engineer'},
          {name: 'Project Manager'},
@@ -591,7 +591,7 @@ export class AppComponent {
    },
    {
      dataDropdown : 'User',
-     det: [
+     detail: [
          {name: 'Karel'},
          {name: 'Fian'},
          {name: 'Sherly'},

@@ -49,7 +49,7 @@ export class AppService {
     data: [
       {
         dataDropdown : 'Project',
-        det: [
+        detail: [
             {name: 'Dinas Kesehatan'},
             {name: 'MacroAd'},
             {name: 'Sistem Tematik'}
@@ -57,7 +57,7 @@ export class AppService {
       },
       {
         dataDropdown : 'Role',
-        det: [
+        detail: [
             {name: 'Back End Engineer'},
             {name: 'Front End Engineer'},
             {name: 'Project Manager'},
@@ -67,7 +67,7 @@ export class AppService {
       },
       {
         dataDropdown : 'User',
-        det: [
+        detail: [
             {name: 'Karel'},
             {name: 'Fian'},
             {name: 'Sherly'},
