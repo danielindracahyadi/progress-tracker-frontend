@@ -1,3 +1,4 @@
+import { LoginAdminComponent } from './pages/admin/login-admin/login-admin.component';
 import { AdminReportDetailComponent } from './pages/admin/report-detail/report-detail.component';
 import { UserReportDetailComponent } from './pages/report-detail/report-detail.component';
 import { HomeReportComponent } from './pages/home-report/home-report.component';
@@ -33,7 +34,7 @@ export const routes: Routes = [
   },
   {
     path: 'admin',
-    component: MainDashboardComponent
+    component: LoginAdminComponent
   },
   {
     path: 'home-admin',
