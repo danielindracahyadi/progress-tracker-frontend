@@ -2,8 +2,6 @@ import { LoginSceneService } from './login-scene.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
-
-import { ServerService } from '../../service/server.service';
 import { FormControl } from '@angular/forms';
 
 @Component({
