@@ -8,8 +8,8 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
 })
 export class ButtonAdminComponent implements OnInit {
 
-  @Input() text = 'Custom Button';
-  @Input() classtouse = 'x';
+  @Input() text = 'Custom Button Admin';
+  @Input() classtouse = '';
   @Output() countChanged = new EventEmitter<number>();
   private totalClicks: number = 0;
 

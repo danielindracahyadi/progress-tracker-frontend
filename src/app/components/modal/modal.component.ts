@@ -14,7 +14,29 @@ import { ModalService } from './modal.service';
 })
 export class ModalComponent {
 
+  @Input() open = '';
+  @Input() category = '';
+  @Input() text = 'custom button modal';
+  @Input() classtouse = '';
+
   constructor(public dialog: MatDialog, public modalService: ModalService) {}
+
+  openModal() {
+    if (this.open === 'openDialogUserSubmit') {
+      this.openDialogUserSubmit ();
+    } else if (this.open === 'openDialogUserDelete') {
+      this.openDialogUserDelete();
+    } else if (this.open === 'openDialogUserConfirmation') {
+      this.openDialogUserConfirmation();
+    } else if (this.open === 'openDialogAdminAdd') {
+      this.openDialogAdminAdd();
+    } else if (this.open === 'openDialogAdminEdit') {
+      this.openDialogAdminEdit();
+    } else if (this.open === 'openDialogAdminDelete') {
+      this.openDialogAdminDelete(this.category);
+    }
+
+  }
 
   openDialogUserSubmit(): void {
     const dialogRef = this.dialog.open(ModalDataUserSubmitComponent, {
@@ -83,4 +105,10 @@ export class ModalComponent {
     });
   }
 
+  ngOnInit() {
+    console.log(this.open);
+    console.log(this.classtouse);
+  }
+
 }
+
