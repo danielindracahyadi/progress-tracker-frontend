@@ -31,6 +31,7 @@ export const MY_FORMATS = {
 
 export class AppComponent {
 
+   //remove this dummy after connected to endpoint
   @Output() dummyCardReportTask = [
     {
       projectName : 'Dinas Kesehatan',
@@ -64,6 +65,7 @@ export class AppComponent {
     }
   ];
 
+   //remove this dummy after connected to endpoint
   @Output() dummyReportDetail = [
    {
      role : 'UI/UX Designer',
@@ -421,6 +423,7 @@ export class AppComponent {
    }
  ];
 
+ //remove this dummy after connected to endpoint
  @Output() dummyUserReportDetail = [
   {
      jobi: 'Dinas Kesehatan',
@@ -543,6 +546,7 @@ export class AppComponent {
   }
 ];
 
+   //remove this dummy after connected to endpoint
   @Output() dummyProjectName = [
     {
       dataDropdown : 'Dinas Kesehatan',
@@ -552,6 +556,7 @@ export class AppComponent {
     }
   ];
 
+   //remove this dummy after connected to endpoint
   @Output() dummyRoles = [
     {
       dataDropdown : 'Back End Engineer',
@@ -570,6 +575,7 @@ export class AppComponent {
     }
   ];
 
+   //remove this dummy after connected to endpoint
   @Output() dummyMainDashboard = [
    {
      dataDropdown : 'Project',
@@ -601,6 +607,8 @@ export class AppComponent {
      ]
    }
   ];
+
+   //remove this dummy after connected to endpoint
   @Output() homeData =
   [
      {
@@ -840,6 +848,7 @@ export class AppComponent {
 
   ngOnInit() {
   }
+  
   chosenYearHandler(normalizedYear: Moment) {
     const ctrlValue = this.date.value;
     ctrlValue.year(normalizedYear.year());
@@ -852,6 +861,7 @@ export class AppComponent {
     this.date.setValue(ctrlValue);
     datepicker.close();
   }
+
   @Output() dataCard = [
     {
       title: 'Dinas Kesehatan',

@@ -16,9 +16,9 @@ export class LoginSceneComponent implements OnInit {
     private loginService: LoginSceneService,
   ) { }
 
-  username = '';
-  password = '';
-  errorMessage = '';
+  username: string = '';
+  password: string = '';
+  errorMessage: string = '';
   loading: boolean = false;
   empty: boolean = false;
   errorLogin: boolean = false;
