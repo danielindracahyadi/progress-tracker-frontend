@@ -18,6 +18,10 @@ export class LoginSceneComponent implements OnInit {
 
   username = '';
   password = '';
+  errorMessage = '';
+  loading: boolean = false;
+  empty: boolean = false;
+  errorLogin: boolean = false;
 
   theData: any;
 
@@ -25,6 +29,11 @@ export class LoginSceneComponent implements OnInit {
   }
 
   login(){
+    if(this.username === '' || this.password === ''){
+      this.empty = true;
+      return;
+    }
+    this.loading = true;
     this.httpClient.post('https://nameless-cove-75161.herokuapp.com/api/auth/sign-in',
     {
       'username' : this.username,
@@ -38,11 +47,13 @@ export class LoginSceneComponent implements OnInit {
         this.loginService.setLoginData(this.theData);
         this.router.navigateByUrl('home');
       } else {
-        alert('Wrong Password or Username, Please Try Again!');
       }
     },
     error  => {
-      console.log('Error', error);
+      this.errorLogin = true;
+      this.errorMessage = error.error.message;
+      this.loading = false;
+      return;
     }
     );
   }

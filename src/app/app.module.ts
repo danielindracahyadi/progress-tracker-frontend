@@ -13,7 +13,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatRippleModule, MatInputModule, MatCardModule, MatDividerModule,
-  MatExpansionModule, MatSelectModule, MatSidenavModule, MatDialogModule } from '@angular/material';
+  MatExpansionModule, MatSelectModule, MatSidenavModule, MatDialogModule, MatProgressSpinnerModule } from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatIconModule } from '@angular/material/icon';
 import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
@@ -51,6 +51,7 @@ import { ModalDataAdminEditComponent } from './components/modal/modal-data-admin
 import { ModalDataAdminDeleteComponent } from './components/modal/modal-data-admin-delete/modal-data-admin-delete.component';
 import { ButtonAdminComponent } from './core-ui/button-admin/button-admin.component';
 import { LoginSceneModule } from './pages/login-scene/login-scene.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -117,7 +118,8 @@ import { LoginSceneModule } from './pages/login-scene/login-scene.module';
     AdminReportDetailComponent,
     Group1172Component,
     MainDashboardComponent,
-    MainDashboardTimeComponent
+    MainDashboardTimeComponent,
+    MatProgressSpinnerModule
   ],
   entryComponents:
   [
@@ -151,8 +153,8 @@ import { LoginSceneModule } from './pages/login-scene/login-scene.module';
     MatListModule,
     MatSelectModule,
     MatSidenavModule,
+    MatProgressSpinnerModule,
     LoginSceneModule,
-    
   ],
   providers: [
     MatDialogModule

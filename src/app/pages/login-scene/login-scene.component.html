@@ -6,10 +6,20 @@
                     <core-ui-text-view text="Progress Tracker Codify" classtouse="title-login"></core-ui-text-view>
                     <core-ui-text-view text="Masukin username sama password kamu" classtouse="bold" class="subtitle-login"></core-ui-text-view>
                     <div class="form-group">
-                        <input placeholder="Username" class="user" [(ngModel)]="username" name="username">
+                        <input 
+                        placeholder="Username" 
+                        type="text" 
+                        class="user" 
+                        [(ngModel)]="username" 
+                        name="username">
                     </div>
                     <div class="form-group">
-                        <input placeholder="Password" class="user" [(ngModel)]="password" name="password">
+                        <input 
+                        placeholder="Password" 
+                        type="password" 
+                        class="user" 
+                        [(ngModel)]="password" 
+                        name="password">
                     </div>
                     <div class="form-group">
                         <a href="#" style="font-family: Source Sans Pro;
@@ -19,6 +29,9 @@
                         opacity: 1;
                         text-decoration:none;">Lupa Password</a>
                         <core-ui-button text="Masuk" classtouse="btn-blue btn-login" (click)="login()" style="margin-left: 118px;"></core-ui-button>
+                        <mat-spinner *ngIf="loading" [diameter]="30"></mat-spinner>
+                        <core-ui-text-view classtouse="red" text="Username or Password are Required" *ngIf="empty"></core-ui-text-view>
+                        <core-ui-text-view classtouse="red" text={{errorMessage}} *ngIf="errorLogin"></core-ui-text-view>
                     </div>
                 </div>
             </form>
