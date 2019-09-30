@@ -6,7 +6,7 @@ import { FormControl } from '@angular/forms';
 
 import { ServerService } from '../../service/server.service';
 import { FormControl } from '@angular/forms';
-import { HttpErrorResponse } from '@angular/common/http';
+
 @Component({
   selector: 'app-login-scene',
   templateUrl: './login-scene.component.html',
