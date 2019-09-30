@@ -51,6 +51,7 @@ import { ModalDataAdminEditComponent } from './components/modal/modal-data-admin
 import { ModalDataAdminDeleteComponent } from './components/modal/modal-data-admin-delete/modal-data-admin-delete.component';
 import { ButtonAdminComponent } from './core-ui/button-admin/button-admin.component';
 import { LoginSceneModule } from './pages/login-scene/login-scene.module';
+import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +93,8 @@ import { LoginSceneModule } from './pages/login-scene/login-scene.module';
     ModalDataAdminEditComponent,
     ModalDataAdminDeleteComponent,
     ButtonAdminComponent,
+    MainDashboardComponent,
+    DropdownAdminComponent
   ],
   exports: [
     AppComponent,
