@@ -51,7 +51,9 @@ import { ModalDataAdminEditComponent } from './components/modal/modal-data-admin
 import { ModalDataAdminDeleteComponent } from './components/modal/modal-data-admin-delete/modal-data-admin-delete.component';
 import { ButtonAdminComponent } from './core-ui/button-admin/button-admin.component';
 import { LoginSceneModule } from './pages/login-scene/login-scene.module';
-import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.component';
+import { HeaderComponent } from './components/header/header.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { ArrowDownComponent } from './svg/arrow-down/arrow-down.component';
 
 @NgModule({
   declarations: [
@@ -94,9 +96,10 @@ import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.
     ModalDataAdminDeleteComponent,
     ButtonAdminComponent,
     MainDashboardComponent,
-    DropdownAdminComponent,
     MainDashboardComponent,
-    MainDashboardTimeComponent
+    MainDashboardTimeComponent,
+    HeaderComponent,
+    ArrowDownComponent,
   ],
   exports: [
     AppComponent,
@@ -160,6 +163,7 @@ import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.
     MatSidenavModule,
     MatProgressSpinnerModule,
     LoginSceneModule,
+    MatMenuModule,
   ],
   providers: [
     MatDialogModule
