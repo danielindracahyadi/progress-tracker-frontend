@@ -29,6 +29,9 @@ export class LoginSceneComponent implements OnInit {
   }
 
   login(){
+    this.loading = false;
+    this.empty = false;
+    this.errorLogin = false;
     if(this.username === '' || this.password === ''){
       this.empty = true;
       return;
