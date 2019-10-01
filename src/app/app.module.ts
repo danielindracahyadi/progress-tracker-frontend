@@ -54,7 +54,6 @@ import { LoginSceneModule } from './pages/login-scene/login-scene.module';
 import { HeaderComponent } from './components/header/header.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { ArrowDownComponent } from './svg/arrow-down/arrow-down.component';
-import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.component';
 
 @NgModule({
   declarations: [
@@ -101,9 +100,6 @@ import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.
     MainDashboardTimeComponent,
     HeaderComponent,
     ArrowDownComponent,
-    DropdownAdminComponent,
-    MainDashboardComponent,
-    MainDashboardTimeComponent
   ],
   exports: [
     AppComponent,
