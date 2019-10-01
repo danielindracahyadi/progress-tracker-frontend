@@ -4,9 +4,6 @@ import { Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { FormControl } from '@angular/forms';
 
-import { ServerService } from '../../service/server.service';
-import { FormControl } from '@angular/forms';
-
 @Component({
   selector: 'app-login-scene',
   templateUrl: './login-scene.component.html',
