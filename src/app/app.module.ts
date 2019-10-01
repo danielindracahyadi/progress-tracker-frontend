@@ -113,7 +113,8 @@ import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.
     ModalDataAdminEditProjectComponent,
     ModalDataAdminEditRoleComponent,
     DropdownAdminComponent,
-    MainDashboardComponent
+    MainDashboardComponent,
+    MainDashboardTimeComponent
   ],
   exports: [
     AppComponent,
