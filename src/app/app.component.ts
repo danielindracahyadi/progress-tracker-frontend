@@ -695,7 +695,7 @@ export class AppComponent {
                   {
                      projectName: 'DLL',
                      roleName: 'Role Lain',
-                     task: 
+                     task:
                      [
                         {
                            taskName: 'Desain Dashboard Element',
@@ -714,7 +714,7 @@ export class AppComponent {
                   {
                      projectName: 'DLL',
                      roleName: 'Role Lain',
-                     task: 
+                     task:
                      [
                         {
                            taskName: 'Desain Dashboard Element',
@@ -800,7 +800,7 @@ export class AppComponent {
                   {
                      projectName: 'DLL',
                      roleName: 'Role Lain',
-                     task: 
+                     task:
                      [
                         {
                            taskName: 'Desain Dashboard Element',
@@ -819,7 +819,7 @@ export class AppComponent {
                   {
                      projectName: 'DLL',
                      roleName: 'Role Lain',
-                     task: 
+                     task:
                      [
                         {
                            taskName: 'Desain Dashboard Element',
@@ -843,13 +843,195 @@ export class AppComponent {
    ];
 
 
+  @Output() dummyMainDashboardTime =[
+     {
+         date: 'Rabu, 19 Desember 2019',
+         otherProjects: 2,
+         projects: [
+            {
+               project: 'Back-end Engineer'
+            },
+            {
+               project: 'Front-end Engineer'
+            },
+            {
+               project: 'Project Manager'
+            }
+         ]
+     },
+     {
+         date: 'Selasa, 20 Desember 2019',
+         otherProjects: 2,
+         projects: [
+            {
+               project: 'Back-end Engineer'
+            },
+            {
+               project: 'Front-end Engineer'
+            },
+            {
+               project: 'Project Manager'
+            }
+         ]
+   },
+   {
+      date: 'Selasa, 21 Desember 2019',
+      otherProjects: 2,
+      projects: [
+         {
+            project: 'Back-end Engineer'
+         },
+         {
+            project: 'Front-end Engineer'
+         },
+         {
+            project: 'Project Manager'
+         }
+      ]
+   },
+   {
+      date: 'Selasa, 22 Desember 2019',
+      otherProjects: 2,
+      projects: [
+         {
+            project: 'Back-end Engineer'
+         },
+         {
+            project: 'Front-end Engineer'
+         },
+         {
+            project: 'Project Manager'
+         }
+      ]
+   },
+   {
+      date: 'Selasa, 20 Desember 2019',
+      otherProjects: 2,
+      projects: [
+         {
+            project: 'Back-end Engineer'
+         },
+         {
+            project: 'Front-end Engineer'
+         },
+         {
+            project: 'Project Manager'
+         }
+      ]
+   },
+   {
+      date: 'Selasa, 20 Desember 2019',
+      otherProjects: 2,
+      projects: [
+         {
+            project: 'Back-end Engineer'
+         },
+         {
+            project: 'Front-end Engineer'
+         },
+         {
+            project: 'Project Manager'
+         }
+      ]
+   },
+   {
+      date: 'Selasa, 21 Desember 2019',
+      otherProjects: 2,
+      projects: [
+         {
+            project: 'Back-end Engineer'
+         },
+         {
+            project: 'Front-end Engineer'
+         },
+         {
+            project: 'Project Manager'
+         }
+      ]
+   },
+   {
+      date: 'Selasa, 22 Desember 2019',
+      otherProjects: 2,
+      projects: [
+         {
+            project: 'Back-end Engineer'
+         },
+         {
+            project: 'Front-end Engineer'
+         },
+         {
+            project: 'Project Manager'
+         }
+      ]
+   },
+   {
+      date: 'Selasa, 20 Desember 2019',
+      otherProjects: 2,
+      projects: [
+         {
+            project: 'Back-end Engineer'
+         },
+         {
+            project: 'Front-end Engineer'
+         },
+         {
+            project: 'Project Manager'
+         }
+      ]
+   },
+   {
+      date: 'Selasa, 20 Desember 2019',
+      otherProjects: 2,
+      projects: [
+         {
+            project: 'Back-end Engineer'
+         },
+         {
+            project: 'Front-end Engineer'
+         },
+         {
+            project: 'Project Manager'
+         }
+      ]
+   },
+   {
+      date: 'Selasa, 21 Desember 2019',
+      otherProjects: 2,
+      projects: [
+         {
+            project: 'Back-end Engineer'
+         },
+         {
+            project: 'Front-end Engineer'
+         },
+         {
+            project: 'Project Manager'
+         }
+      ]
+   },
+   {
+      date: 'Selasa, 22 Desember 2019',
+      otherProjects: 2,
+      projects: [
+         {
+            project: 'Back-end Engineer'
+         },
+         {
+            project: 'Front-end Engineer'
+         },
+         {
+            project: 'Project Manager'
+         }
+      ]
+   }
+  ];
 
   date = new FormControl(moment());
   month: string[];
 
   ngOnInit() {
   }
-  
+
   chosenYearHandler(normalizedYear: Moment) {
     const ctrlValue = this.date.value;
     ctrlValue.year(normalizedYear.year());
