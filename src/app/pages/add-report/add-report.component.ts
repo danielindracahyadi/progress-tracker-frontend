@@ -1,7 +1,10 @@
+import { AddReportService } from './add-report.service';
 import { AppService } from './../../app.service';
 import { Component, OnInit, Input, ComponentRef, ViewContainerRef, ViewChild, ComponentFactoryResolver, ComponentFactory } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CardAddReportDropdownComponent } from 'src/app/components/card-add-report-dropdown/card-add-report-dropdown.component';
+import { HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'add-report',
@@ -10,8 +13,9 @@ import { CardAddReportDropdownComponent } from 'src/app/components/card-add-repo
 })
 export class AddReportComponent implements OnInit {
   @ViewChild('viewContainerRef', { static: true, read: ViewContainerRef }) VCR: ViewContainerRef;
-  @Input() dataProjectName = '';
-  @Input() dataRoles = '';
+
+  dataProjectName: any = [];
+  dataRoles: any = [];
 
   index: number = 0;
   componentsReferences = [];
@@ -19,17 +23,34 @@ export class AddReportComponent implements OnInit {
   showDetail = false;
 
   constructor( 
-    private appService: AppService,
     private activatedRoutes: ActivatedRoute,
     private router: Router,
-    private _translateService:AppService,
+    private addReportService: AddReportService,
     private CFR: ComponentFactoryResolver,
+    private httpClient: HttpClient
   ) { }
 
-  ngOnInit() {
-    this._translateService.projectName.subscribe(
+  async ngOnInit() {
+    const token = localStorage.getItem('userToken');
+    const headers = new HttpHeaders()
+            .set('authorization', token);
+    await this.httpClient.get('https://nameless-cove-75161.herokuapp.com/api/page/project-role',
+    {
+      headers
+    })
+    .subscribe(
+      (data: any)  => {
+        this.dataProjectName = data.data.project;
+        this.dataRoles = data.data.role;
+      },
+    error  => {
+      console.log(error);
+    }
+    );
+
+    this.addReportService.projectName.subscribe(
       () => {
-        this._translateService.rolesName.subscribe(
+        this.addReportService.rolesName.subscribe(
           () => {
             this.showDetail = true;
           }
@@ -38,38 +59,29 @@ export class AddReportComponent implements OnInit {
     );
   }
 
-  addProject(){
+  async addProject() {
     const componentFactory = this.CFR.resolveComponentFactory(CardAddReportDropdownComponent);
     const componentRef: ComponentRef<CardAddReportDropdownComponent> = this.VCR.createComponent(componentFactory);
     const currentComponent = componentRef.instance;
-    componentRef.instance.projects = [
-      {
-        dataDropdown : 'Dinas Kesehatan',
+    const token = localStorage.getItem('userToken');
+    const headers = new HttpHeaders()
+            .set('authorization', token);
+    await this.httpClient.get('https://nameless-cove-75161.herokuapp.com/api/page/project-role',
+    {
+      headers
+    })
+    .subscribe(
+      (data: any)  => {
+        componentRef.instance.dataProjectNameFinal = data.data.project;
+        componentRef.instance.dataRolesFinal = data.data.role;
       },
-      {
-        dataDropdown : 'MacroAd',
-      }
-    ];
-    componentRef.instance.roles = [
-      {
-        dataDropdown : 'Back End Engineer',
-      },
-      {
-        dataDropdown : 'Front End Engineer',
-      },
-      {
-        dataDropdown : 'Project Manager',
-      },
-      {
-        dataDropdown : 'QA Analyst',
-      },
-      {
-        dataDropdown : 'UI / UX Designer',
-      }
-    ];
+    error  => {
+      console.log(error);
+    }
+    );
     currentComponent.selfRef = currentComponent;
     currentComponent.index = ++this.index;
     currentComponent.compInteraction = this;
-    this.componentsReferences.push(componentRef);
+    await this.componentsReferences.push(componentRef);
   }
 }
