@@ -43,7 +43,6 @@ export class CardAddReportDropdownComponent implements OnInit {
       this.dataRolesFinal = this.roles;
     }
   }
-
   ngOnInit() {
   }
 }
