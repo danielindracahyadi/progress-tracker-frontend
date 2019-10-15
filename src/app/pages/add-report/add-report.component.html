@@ -6,6 +6,9 @@
     <div *ngFor="let item of objectCard" (click)="selectProject(item)">
         <card-add-report-dropdown [dataProjectsName]="item.projects" [dataRolesName]="item.roles"></card-add-report-dropdown>
     </div>
+    <!-- <div>
+      <ng-template #viewContainerRef></ng-template>
+    </div> -->
     <br>
     <card-add-report-button (click)="addCardProject()"></card-add-report-button>
   </div>
