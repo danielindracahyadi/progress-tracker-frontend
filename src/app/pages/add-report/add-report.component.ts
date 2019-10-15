@@ -47,16 +47,6 @@ export class AddReportComponent implements OnInit {
       console.log(error);
     }
     );
-
-    // this.addReportService.projectName.subscribe(
-    //   () => {
-    //     this.addReportService.rolesName.subscribe(
-    //       () => {
-    //         this.showDetail = true;
-    //       }
-    //     );
-    //   }
-    // );
   }
 
   addCardProject() {
