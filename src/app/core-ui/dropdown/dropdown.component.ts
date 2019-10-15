@@ -21,7 +21,7 @@ export class DropdownComponent implements OnInit {
   selectedData;
 
   constructor(
-    private appService: AddReportService,
+    private addReportService: AddReportService,
     private activatedRoutes: ActivatedRoute,
     private router: Router,
     ) { }
@@ -42,9 +42,9 @@ export class DropdownComponent implements OnInit {
 
   selected(){
     if (this.function === 'selectProjectName') {
-      this.appService.setSelectedProjectName(this.selectedData);
+      this.addReportService.setSelectedProjectName(this.selectedData);
     } else if (this.function === 'selectRolesName') {
-      this.appService.setSelectedRolesName(this.selectedData);
+      this.addReportService.setSelectedRolesName(this.selectedData);
     }
   }
 }
