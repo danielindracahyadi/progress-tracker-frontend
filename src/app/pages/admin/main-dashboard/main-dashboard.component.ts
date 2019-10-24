@@ -53,7 +53,7 @@ export class MainDashboardComponent implements OnInit {
 
 
   showResult() {
-    this.selectedMainDashboardDropdown = this.mainDashboardService.getSelectedMainDashboardName();
+    this.selectedMainDashboardDropdown = this.mainDashboardService.getSelectedMainDashboardCategory();
 
     if (this.selectedMainDashboardDropdown === 'Project' || this.selectedMainDashboardDropdown === '') {
       if(this.theSearchResult.length === 0) {

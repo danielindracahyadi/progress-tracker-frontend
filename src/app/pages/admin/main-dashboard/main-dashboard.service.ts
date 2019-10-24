@@ -6,13 +6,20 @@ import { Injectable, Output } from '@angular/core';
 export class MainDashboardService {
 
   constructor() { }
-  private selectMainDashboardName: string = '';
+  private selectedMainDashboardCategory: string = '';
+  private selectedID: number;
 
-  getSelectedMainDashboardName() {
-    return this.selectMainDashboardName;
+  getSelectedMainDashboardCategory() {
+    return this.selectedMainDashboardCategory;
+  }
+  setSelectedMainDashboardCategory(selectedMainDashboardCategory: string) {
+    this.selectedMainDashboardCategory = selectedMainDashboardCategory;
   }
 
-  setSelectedMainDashboardName(selectMainDashboardName: string) {
-    this.selectMainDashboardName = selectMainDashboardName;
+  getSelectedID() {
+    return this.selectedID;
+  }
+  setSelectedID(selectedID: number) {
+    this.selectedID = selectedID;
   }
 }

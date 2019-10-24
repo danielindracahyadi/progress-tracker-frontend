@@ -48,8 +48,8 @@ export class DropdownComponent implements OnInit {
       this.addReportService.setSelectedProjectName(this.selectedData);
     } else if (this.function === 'selectRolesName') {
       this.addReportService.setSelectedRolesName(this.selectedData);
-    } else if (this.function === 'selectMainDashboardName') {
-      this.mainDashboardService.setSelectedMainDashboardName(this.selectedData);
+    } else if (this.function === 'selectedMainDashboardCategory') {
+      this.mainDashboardService.setSelectedMainDashboardCategory(this.selectedData);
       this.mainDashboard.showResult();
     }
   }
