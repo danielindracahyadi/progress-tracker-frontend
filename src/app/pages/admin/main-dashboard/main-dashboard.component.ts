@@ -127,11 +127,11 @@ export class MainDashboardComponent implements OnInit {
     this.searchDataUser = this.dataUserName;
     this.theSearchResult = searchResult;
     this.searchDataProject =
-      this.searchDataProject.filter(thedata => thedata.projectname.toLowerCase().includes(this.theSearchResult.toLowerCase()) );
+      this.searchDataProject.filter(theData => theData.projectname.toLowerCase().includes(this.theSearchResult.toLowerCase()) );
     this.searchDataRole =
-      this.searchDataRole.filter(thedata => thedata.rolename.toLowerCase().includes(this.theSearchResult.toLowerCase()) );
+      this.searchDataRole.filter(theData => theData.rolename.toLowerCase().includes(this.theSearchResult.toLowerCase()) );
     this.searchDataUser =
-      this.searchDataUser.filter(thedata => thedata.username.toLowerCase().includes(this.theSearchResult.toLowerCase()) );
+      this.searchDataUser.filter(theData => theData.username.toLowerCase().includes(this.theSearchResult.toLowerCase()) );
     this.showResult();
   }
 }
