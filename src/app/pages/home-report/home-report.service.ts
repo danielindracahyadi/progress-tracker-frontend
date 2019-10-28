@@ -8,7 +8,7 @@ export class HomeReportService {
   reportdate: string;
   newdata: string;
 
-  constructor() {}
+  constructor() { }
 
   getReportdate() {
     return this.reportdate;

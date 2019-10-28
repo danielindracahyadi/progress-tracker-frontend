@@ -23,20 +23,20 @@ export class HomeReportComponent implements OnInit {
   async ngOnInit() {
     const token = localStorage.getItem('userToken');
     const headers = new HttpHeaders()
-            .set('authorization', token);
+      .set('authorization', token);
     await this.httpClient.get('https://nameless-cove-75161.herokuapp.com/api/page/home',
-    {
-      headers
-    })
-    .subscribe(
-      (response: ResponseObject)  => {
-        console.log(response);
-        this.dataHome = response;
-      },
-    error  => {
-      console.log(error);
-    }
-    );
+      {
+        headers
+      })
+      .subscribe(
+        (response: ResponseObject) => {
+          console.log(response);
+          this.dataHome = response;
+        },
+        error => {
+          console.log(error);
+        }
+      );
 
   }
 

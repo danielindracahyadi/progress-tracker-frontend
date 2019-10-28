@@ -21,7 +21,7 @@ export class CardComponent implements OnInit {
     private homeReportService: HomeReportService
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   addReport() {
     this.router.navigateByUrl('home/add-report');
@@ -30,6 +30,7 @@ export class CardComponent implements OnInit {
   reportDetail(reportdate: string) {
     this.homeReportService.newdata = reportdate;
     this.router.navigateByUrl('home/report-detail');
+    console.log(reportdate);
   }
 
   ngOnChanges() {
