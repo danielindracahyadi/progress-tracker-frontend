@@ -21,7 +21,6 @@ export class HomeReportComponent implements OnInit {
   dataHome: any = {};
 
   async ngOnInit() {
-    // this.dataHome = await this.appService.getHomeData();
     const token = localStorage.getItem('userToken');
     const headers = new HttpHeaders()
             .set('authorization', token);

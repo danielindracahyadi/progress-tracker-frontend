@@ -21,16 +21,7 @@ export class CardComponent implements OnInit {
     private homeReportService: HomeReportService
   ) { }
 
-  ngOnInit() {
-    // const count = this.dataHome.data.length;
-    // for (let q = 0; q < count; q++) {
-    //   const testDate = this.dataHome.data[q].reportDate;
-    //   const finalDate = moment(testDate).format('dddd, DD MMMM YYYY');
-    //   this.dataHome.data[q].reportDate = finalDate;
-    //   this.dataHome[0].data[q].reportDate = finalDate;
-    //   this.dataHome.data[q].reportDate = finalDate;
-    // }
-  }
+  ngOnInit() {}
 
   addReport() {
     this.router.navigateByUrl('home/add-report');
@@ -39,7 +30,6 @@ export class CardComponent implements OnInit {
   reportDetail(reportdate: string) {
     this.router.navigateByUrl('home/report-detail');
     console.log(reportdate);
-    //this.homeReportService.setReportdate(reportdate);
   }
 
   ngOnChanges() {
