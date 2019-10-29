@@ -1,6 +1,5 @@
 import { AddReportService } from './add-report.service';
-import { Component, OnInit, Input, ComponentRef, ViewContainerRef, ViewChild, ComponentFactoryResolver, ComponentFactory } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { ResponseObject } from 'src/app/types';
@@ -14,19 +13,32 @@ export class AddReportComponent implements OnInit {
   dataProjectsName: any;
   dataRolesName: any;
   objectCard: any;
-  selectedData: any;
+  selectedDataProject = '';
+  selectedDataRole = '';
 
   showDetail = false;
 
+  taskData = [{
+    jobTitle: '',
+    jobDesc: '',
+    progress: '',
+  }];
+  divisionAddReportData = [{
+    projectName : '',
+    roleName : '',
+    task : this.taskData
+  }];
+  addReportData = {
+    reportDate : '',
+    division : this.divisionAddReportData
+  };
+
   constructor(
-    private activatedRoutes: ActivatedRoute,
-    private router: Router,
-    private addReportService: AddReportService,
-    private CFR: ComponentFactoryResolver,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private addReportService: AddReportService
   ) { }
 
-  async ngOnInit(){
+  async ngOnInit() {
     const token = localStorage.getItem('userToken');
     const headers = new HttpHeaders()
             .set('authorization', token);
@@ -41,10 +53,9 @@ export class AddReportComponent implements OnInit {
         this.objectCard = [{
           projects: this.dataProjectsName,
           roles: this.dataRolesName,
-        }]
+        }];
       },
     error  => {
-      console.log(error);
     }
     );
   }
@@ -56,7 +67,39 @@ export class AddReportComponent implements OnInit {
     });
   }
 
-  selectProject(item){
-    this.selectedData = [item];
+  selectProject(index) {
+    console.log('index', index);
+    this.selectedDataProject = this.addReportData.division[index].projectName;
+    this.selectedDataRole = this.addReportData.division[index].roleName;
+
+    console.log(this.addReportData);
+
+    if(this.addReportData.division[index].task.length === 1) {
+      this.addReportData.division[index].task[0].jobDesc = 
+    } else {
+
+    }
+  }
+
+  public showDetailFunction() {
+    // console.log(this.addReportData.reportDate);
+    if (this.addReportData.reportDate === '') {
+      this.divisionAddReportData[0].projectName = this.addReportService.getSelectedProjectName();
+      this.divisionAddReportData[0].roleName = this.addReportService.getSelectedRolesName();
+      this.divisionAddReportData[0].task = this.taskData;
+      this.addReportData = {
+        reportDate: 'aa',
+        division: this.divisionAddReportData
+      };
+      this.showDetail = true;
+    } else {
+      this.divisionAddReportData.push({
+        projectName: this.addReportService.getSelectedProjectName(),
+        roleName: this.addReportService.getSelectedRolesName(),
+        task: this.taskData,
+      });
+    }
+
+    console.log(this.addReportData);
   }
 }

@@ -18,7 +18,6 @@ export class AddReportService {
 
   setSelectedProjectName(selectedProjectName: string){
     this.selectedProjectName = selectedProjectName;
-    this.projectName.emit(selectedProjectName);
   }
 
   getSelectedRolesName() {
@@ -27,6 +26,5 @@ export class AddReportService {
 
   setSelectedRolesName(selectedRolesName: string){
     this.selectedRoleName = selectedRolesName;
-    this.rolesName.emit(selectedRolesName);
   }
 }

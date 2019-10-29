@@ -1,5 +1,7 @@
+import { AddReportService } from './../../pages/add-report/add-report.service';
+import { AddReportComponent } from './../../pages/add-report/add-report.component';
 import { AppService } from './../../app.service';
-;import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 export interface myinterface {
@@ -33,6 +35,8 @@ export class CardAddReportDropdownComponent implements OnInit {
     private appService: AppService,
     private activatedRoutes: ActivatedRoute,
     private router: Router,
+    private addReportComponent: AddReportComponent,
+    private addReportService: AddReportService
   ) { }
 
   ngOnChanges(){
@@ -44,5 +48,13 @@ export class CardAddReportDropdownComponent implements OnInit {
     }
   }
   ngOnInit() {
+  }
+
+  showDetail(){
+    if (this.addReportService.getSelectedProjectName() === '' || this.addReportService.getSelectedRolesName() === ''){
+      alert('Please fill the Project and Role!');
+      return;
+    }
+    this.addReportComponent.showDetailFunction();
   }
 }

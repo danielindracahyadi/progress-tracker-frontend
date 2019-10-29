@@ -3,7 +3,7 @@
   <div class="column" >
     <component-card-report-title></component-card-report-title>
     <br>
-    <div *ngFor="let item of objectCard" (click)="selectProject(item)">
+    <div *ngFor="let item of objectCard; let i = index" (click)="selectProject(i)">
         <card-add-report-dropdown [dataProjectsName]="item.projects" [dataRolesName]="item.roles"></card-add-report-dropdown>
     </div>
     <br>
@@ -12,8 +12,10 @@
   <div class="column1">
     <mat-divider vertical style="height:676px; position: absolute;"></mat-divider>
   </div>
-  <div class="column2" *ngFor="let obj of selectedData">
-    <card-add-report-detail></card-add-report-detail>
+  <div *ngIf="showDetail">
+    <div class="column2">
+      <card-add-report-detail projectName="{{selectedDataProject}}" rolesName="{{selectedDataRole}}"></card-add-report-detail>
+    </div>
   </div>
 </div>
 
