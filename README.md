@@ -365,7 +365,7 @@ Response Value
     },
     ...
   ]
-  message : "Successfully retrieve all of the user's posts"
+  message : "Successfully get user's reports"
 }
 ```
 <br/>
