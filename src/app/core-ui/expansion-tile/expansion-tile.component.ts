@@ -50,4 +50,5 @@ export class ExpansionTileComponent implements OnInit {
     console.log('Delete ' + this.mainDashboard.theCurrentChosen);
   }
 
+
 }
