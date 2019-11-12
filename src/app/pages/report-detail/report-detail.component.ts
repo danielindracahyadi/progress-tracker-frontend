@@ -15,7 +15,6 @@ export class UserReportDetailComponent implements OnInit {
   stringLink = '';
   dataReportDetail: any;
 
-  comments: number[];
   @ViewChildren('commentCard', { read: ElementRef }) commentCardList: QueryList<ElementRef>;
 
   constructor(
@@ -25,18 +24,14 @@ export class UserReportDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.comments = [1];
-    console.log(this.homeReportService.newdata);
     if ( this.homeReportService.newdata === undefined) {
-      // alert('No Date chosen, please chose the date first');
+      alert('No Date chosen, please chose the date first');
       this.router.navigateByUrl('home');
     } else {
       this.stringDate = new Date(this.homeReportService.newdata).toISOString().slice(0, 10);
     }
-    console.log(this.stringDate);
 
     this.stringLink = 'https://nameless-cove-75161.herokuapp.com/api/page/report-detail?date=' + this.stringDate;
-    console.log(this.stringLink);
     const token = localStorage.getItem('userToken');
     const headers = new HttpHeaders()
             .set('authorization', token);
@@ -60,7 +55,6 @@ export class UserReportDetailComponent implements OnInit {
 
   focus() {
     const elementRef = this.commentCardList.find((item, index) => index === 4);
-    console.log(elementRef);
     elementRef.nativeElement.focus();
 
   }
