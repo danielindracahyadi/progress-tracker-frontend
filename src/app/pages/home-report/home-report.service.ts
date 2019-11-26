@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HomeReportService {
-
   reportdate: string;
   newdata: string;
+  hasil: any;
 
   constructor() { }
 
@@ -17,4 +17,12 @@ export class HomeReportService {
   setReportdate(reportdate: string) {
     this.reportdate = reportdate;
   }
+
+  // getHasil() {
+  //   return this.hasil;
+  // }
+
+  // setHasil(hasil: any) {
+  //   this.hasil = hasil;
+  // }
 }

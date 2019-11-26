@@ -1,16 +1,15 @@
-import { AppService } from './../../app.service';
-import { Component, OnInit, NgModule, Input } from '@angular/core';
-import { MatCardModule } from '@angular/material';
-import moment from 'moment';
-import { ActivatedRoute, Router } from '@angular/router';
-import { HomeReportService } from 'src/app/pages/home-report/home-report.service';
+import { AppService } from "./../../app.service";
+import { Component, OnInit, NgModule, Input } from "@angular/core";
+import { MatCardModule } from "@angular/material";
+import moment from "moment";
+import { ActivatedRoute, Router } from "@angular/router";
+import { HomeReportService } from "src/app/pages/home-report/home-report.service";
 
 @Component({
-  selector: 'component-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.sass']
+  selector: "component-card",
+  templateUrl: "./card.component.html",
+  styleUrls: ["./card.component.sass"]
 })
-
 export class CardComponent implements OnInit {
   @Input() dataHome: any = {};
 
