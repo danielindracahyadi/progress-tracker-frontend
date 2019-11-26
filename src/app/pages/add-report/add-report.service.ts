@@ -1,22 +1,22 @@
-import {Injectable, Output, EventEmitter} from '@angular/core';
+import { Injectable, Output, EventEmitter } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root"
 })
 export class AddReportService {
   @Output() projectName: EventEmitter<any> = new EventEmitter();
   @Output() rolesName: EventEmitter<any> = new EventEmitter();
 
   constructor() {}
-  private selectedProjectName: string = '';
-  private selectedRoleName: string = '';
-  private jobdescTitle: string = '';
-  private jobdesc: string = '';
+  private selectedProjectName: string = "";
+  private selectedRoleName: string = "";
+  private jobdescTitle: string = "";
+  private jobdesc: string = "";
   private progress: number = 0;
   private task = {
-    jobTitle: '',
-    jobDesc: '',
-    progress: 0,
+    jobTitle: "",
+    jobDesc: "",
+    progress: 0
   };
   private index: number = 0;
 

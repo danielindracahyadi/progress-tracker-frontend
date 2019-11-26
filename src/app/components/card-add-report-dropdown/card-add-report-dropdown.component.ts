@@ -3,12 +3,14 @@ import { AddReportComponent } from "./../../pages/add-report/add-report.componen
 import { AppService } from "./../../app.service";
 import { Component, OnInit, Input, Output } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
+import { MainDashboardComponent } from "src/app/pages/admin/main-dashboard/main-dashboard.component";
 
 export interface myinterface {}
 
 @Component({
   selector: "card-add-report-dropdown",
   templateUrl: "./card-add-report-dropdown.component.html",
+  providers: [MainDashboardComponent],
   styleUrls: ["./card-add-report-dropdown.component.sass"]
 })
 export class CardAddReportDropdownComponent implements OnInit {
@@ -45,6 +47,7 @@ export class CardAddReportDropdownComponent implements OnInit {
       this.dataRolesFinal = this.roles;
     }
   }
+
   ngOnInit() {}
 
   showDetail() {

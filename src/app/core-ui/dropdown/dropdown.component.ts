@@ -51,7 +51,7 @@ export class DropdownComponent implements OnInit {
   selected() {
     if (this.function === "selectProjectName") {
       this.addReportService.setSelectedProjectName(this.selectedData);
-    } else if (this.function === "selectRolesName") {
+    } else if (this.function === "selectRoleName") {
       this.addReportService.setSelectedRolesName(this.selectedData);
     } else if (this.function === "selectedMainDashboardCategory") {
       this.mainDashboardService.setSelectedMainDashboardCategory(

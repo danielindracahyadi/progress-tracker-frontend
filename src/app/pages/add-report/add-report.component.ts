@@ -116,8 +116,6 @@ export class AddReportComponent implements OnInit {
   submit() {
     this.loading = false;
     this.loading = true;
-    console.log(this.addReportData.reportDate);
-    console.log(this.addReportData.division);
     const token = localStorage.getItem("userToken");
     let headers = new HttpHeaders({
       "Content-Type": "application/json",
