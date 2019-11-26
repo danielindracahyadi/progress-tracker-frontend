@@ -47,6 +47,8 @@ import { ModalDataUserDeleteComponent } from './components/modal/modal-data-user
 import { ModalDataUserConfirmationComponent } from './components/modal/modal-data-user-confirmation/modal-data-user-confirmation.component';
 import { Group1227Component } from './svg/group1227/group1227.component';
 import { ModalDataAdminAddComponent } from './components/modal/modal-data-admin-add/modal-data-admin-add.component';
+import { ModalDataAdminAddRoleComponent } from './components/modal/modal-data-admin-add-role/modal-data-admin-add-role.component';
+import { ModalDataAdminAddProjectComponent } from './components/modal/modal-data-admin-add-project/modal-data-admin-add-project.component';
 import { ModalDataAdminEditComponent } from './components/modal/modal-data-admin-edit/modal-data-admin-edit.component';
 import { ModalDataAdminDeleteComponent } from './components/modal/modal-data-admin-delete/modal-data-admin-delete.component';
 import { ButtonAdminComponent } from './core-ui/button-admin/button-admin.component';
@@ -92,6 +94,8 @@ import { ArrowDownComponent } from './svg/arrow-down/arrow-down.component';
     ModalDataUserDeleteComponent,
     ModalDataUserConfirmationComponent,
     ModalDataAdminAddComponent,
+    ModalDataAdminAddRoleComponent,
+    ModalDataAdminAddProjectComponent,
     ModalDataAdminEditComponent,
     ModalDataAdminDeleteComponent,
     ButtonAdminComponent,
@@ -135,6 +139,8 @@ import { ArrowDownComponent } from './svg/arrow-down/arrow-down.component';
     ModalDataUserDeleteComponent,
     ModalDataUserConfirmationComponent,
     ModalDataAdminAddComponent,
+    ModalDataAdminAddProjectComponent,
+    ModalDataAdminAddRoleComponent,
     ModalDataAdminEditComponent,
     ModalDataAdminDeleteComponent,
     ButtonAdminComponent
