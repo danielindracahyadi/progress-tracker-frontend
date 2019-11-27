@@ -28,6 +28,7 @@ export class CardComponent implements OnInit {
 
   reportDetail(reportdate: string) {
     this.homeReportService.newdata = reportdate;
+    console.log(this.homeReportService.newdata);
     this.router.navigateByUrl('home/report-detail');
     console.log(reportdate);
   }
