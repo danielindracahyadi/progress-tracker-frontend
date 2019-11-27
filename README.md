@@ -107,7 +107,7 @@ Response Value
 
 | A | B |
 | ----------- | ------------- |
-| FETCH       | api/feature/admin/delete-user/:userid |
+| FETCH       | api/auth/admin/delete-user/:userid |
 | METHOD      | GET |
 | Description | Feature's Endpoint used to delete a user and all of its relation |
 
