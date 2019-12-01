@@ -41,11 +41,6 @@ export class HomeReportComponent implements OnInit {
           this.dataHome = response;
           this.temp = 0;
 
-          // for (let i = 0; i <= this.dataHome.data.length; i++) {
-          //   this.date = new Date(this.dataHome.data[i].reportdate);
-          //   this.tanggal[i] = this.date.getDate();
-          //   // console.log(this.tanggal[i]);
-          // }
           let temp = 0;
           for (let i = 31; i >= 0; i--) {
             for (let j = temp; j < this.dataHome.data.length; j++) {
@@ -70,7 +65,6 @@ export class HomeReportComponent implements OnInit {
 
           console.log('Hasil');
           console.log(this.hasil);
-          // this.homereportService.setHasil(this.hasil);
         },
         (error) => {
           console.log(error);

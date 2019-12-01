@@ -17,12 +17,4 @@ export class HomeReportService {
   setReportdate(reportdate: string) {
     this.reportdate = reportdate;
   }
-
-  // getHasil() {
-  //   return this.hasil;
-  // }
-
-  // setHasil(hasil: any) {
-  //   this.hasil = hasil;
-  // }
 }
