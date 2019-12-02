@@ -47,11 +47,6 @@ export class ModalDataAdminAddComponent implements OnInit {
       return;
     }
     );
-    console.log(this.namaUser);
-    console.log(this.emailUser);
-    console.log(this.userName);
-    console.log(this.password);
-
   }
 
 }

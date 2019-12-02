@@ -41,7 +41,6 @@ export class ModalDataAdminAddRoleComponent implements OnInit {
       return;
     }
     );
-    console.log(this.roleName);
 
   }
 

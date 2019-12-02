@@ -44,7 +44,6 @@ export class ModalDataAdminAddProjectComponent implements OnInit {
       return;
     }
     );
-    console.log(this.projectName);
 
   }
 }
