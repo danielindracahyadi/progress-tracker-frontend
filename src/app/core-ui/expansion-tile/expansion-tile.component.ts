@@ -16,6 +16,8 @@ export class ExpansionTileComponent implements OnInit {
   showUser = false;
   featureTambah = '';
 
+  showOpenDialog = false;
+
   @Input() text = '';
   constructor(
     private appService: AppService,
@@ -59,7 +61,9 @@ export class ExpansionTileComponent implements OnInit {
     console.log('Edit ' + this.mainDashboard.theCurrentChosen);
   }
   doDelete() {
-    console.log('Delete ' + this.mainDashboard.theCurrentChosen);
+    console.log('Delete Name: ' + this.mainDashboard.theCurrentChosen);
+    console.log('Delete ID: ' + this.mainDashboard.theCurrentChosenID);
+    this.showOpenDialog = true;
   }
 
 

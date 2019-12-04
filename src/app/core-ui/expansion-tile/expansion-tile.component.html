@@ -18,5 +18,7 @@
             <button mat-list-item (click)="doEdit()"> Edit {{featureTambah}} </button>
         <mat-divider></mat-divider>
             <button mat-list-item (click)="doDelete()"> Delete {{featureTambah}} </button>
+            <div *ngIf="showOpenDialog"><component-modal open="openDialogAdminDelete"></component-modal></div>
+
     </mat-action-list>
 </mat-expansion-panel>
