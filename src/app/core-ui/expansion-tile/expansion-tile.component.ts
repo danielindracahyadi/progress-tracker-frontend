@@ -3,9 +3,12 @@ import { AppService } from './../../app.service';
 import { MainDashboardService } from 'src/app/pages/admin/main-dashboard/main-dashboard.service';
 import { MainDashboardComponent } from 'src/app/pages/admin/main-dashboard/main-dashboard.component';
 import { Router } from '@angular/router';
+import { ModalService } from 'src/app/components/modal/modal.service';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
   selector: 'core-ui-expansion-tile',
+  providers: [ModalComponent],
   templateUrl: './expansion-tile.component.html',
   styleUrls: ['./expansion-tile.component.sass']
 })
@@ -15,8 +18,7 @@ export class ExpansionTileComponent implements OnInit {
   showReport = false;
   showUser = false;
   featureTambah = '';
-
-  showOpenDialog = false;
+  @Input() category = '';
 
   @Input() text = '';
   constructor(
@@ -24,6 +26,8 @@ export class ExpansionTileComponent implements OnInit {
     private mainDashboardService: MainDashboardService,
     private router: Router,
     private mainDashboard: MainDashboardComponent,
+    private modalService: ModalService,
+    private modalComponent: ModalComponent,
   ) {}
 
   ngOnInit() {
@@ -58,12 +62,14 @@ export class ExpansionTileComponent implements OnInit {
     }
   }
   doEdit() {
-    console.log('Edit ' + this.mainDashboard.theCurrentChosen);
+    console.log('Edit Name: ' + this.mainDashboard.theCurrentChosen);
+    console.log('Edit ID: ' + this.mainDashboard.theCurrentChosenID);
   }
   doDelete() {
     console.log('Delete Name: ' + this.mainDashboard.theCurrentChosen);
     console.log('Delete ID: ' + this.mainDashboard.theCurrentChosenID);
-    this.showOpenDialog = true;
+    this.mainDashboardService.setSelectedID(this.mainDashboard.theCurrentChosenID);
+    this.modalComponent.openDialogAdminDelete(this.category);
   }
 
 
