@@ -20,6 +20,7 @@ export class MainDashboardTimeComponent implements OnInit {
    SelectedID: any;
    showNameProject = false;
    showNameRoles = false;
+   showEmptyData = false;
 
  onClick(){
     console.log("Card id Clicked!");
@@ -51,12 +52,17 @@ export class MainDashboardTimeComponent implements OnInit {
        this.dataRoles = response.data.rolename;
        this.dataProject = response.data.projectname;
        this.dataName = this.mainDashboardService.selectedName;
+       console.log(response.data.length);
+       if (response.data.length === 0) {
+        this.showEmptyData = true;
+        console.log('harusnya keluar');
+       }
        if (this.MainDashboardCategory === 'projects') {
         this.showNameProject = true;
         this.showNameRoles = false;
       } else if (this.MainDashboardCategory === 'roles') {
-        this.showNameProject = false;
-        this.showNameRoles = true;
+          this.showNameProject = false;
+          this.showNameRoles = true;
       }
      },
    error  => {

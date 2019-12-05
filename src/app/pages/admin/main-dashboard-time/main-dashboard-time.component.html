@@ -24,6 +24,11 @@
             <input id="date" type="date" value="">
         </div>
 
+        <div *ngIf="showEmptyData">
+            <div class="cabor">Empty Data</div>
+        </div>
+
+
         <div *ngIf="showNameProject">
             <mat-card *ngFor="let item of objectCard" (click)="onClick()" class="cabor">
                 <mat-card-header>
