@@ -34,9 +34,6 @@ export class ModalDataAdminEditComponent implements OnInit {
   }
 
   onConfirm() {
-    console.log(this.category);
-    console.log(this.namaUser);
-
     const token = localStorage.getItem("adminToken");
     let headers = new HttpHeaders({
       "Content-Type": "application/json",
@@ -52,9 +49,8 @@ export class ModalDataAdminEditComponent implements OnInit {
       .subscribe(
         data => {
           this.theData = data;
-          console.log(this.theData);
           if (this.theData.success === true) {
-            // window.location.reload();
+            window.location.reload();
           } else {
           }
         },

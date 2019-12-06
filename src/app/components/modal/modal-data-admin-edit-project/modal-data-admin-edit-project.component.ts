@@ -34,9 +34,6 @@ export class ModalDataAdminEditProjectComponent implements OnInit {
   }
 
   onConfirm() {
-    console.log(this.category);
-    console.log(this.namaProject);
-
     const token = localStorage.getItem("adminToken");
     let headers = new HttpHeaders({
       "Content-Type": "application/json",

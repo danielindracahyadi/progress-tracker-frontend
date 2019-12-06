@@ -63,8 +63,6 @@ export class ExpansionTileComponent implements OnInit {
   }
 
   doEdit() {
-    console.log('Edit Name: ' + this.mainDashboard.theCurrentChosen);
-    console.log('Edit ID: ' + this.mainDashboard.theCurrentChosenID);
     this.modalService.setTheCurrentChosenID(this.mainDashboard.theCurrentChosenID);
 
     this.mainDashboardService.setSelectedID(this.mainDashboard.theCurrentChosenID);

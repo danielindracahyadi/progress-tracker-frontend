@@ -34,9 +34,6 @@ export class ModalDataAdminEditRoleComponent implements OnInit {
   }
 
   onConfirm() {
-    console.log(this.category);
-    console.log(this.namaRole);
-
     const token = localStorage.getItem("adminToken");
     let headers = new HttpHeaders({
       "Content-Type": "application/json",

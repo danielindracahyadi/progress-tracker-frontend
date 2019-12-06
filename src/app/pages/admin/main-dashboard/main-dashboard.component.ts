@@ -124,7 +124,6 @@ export class MainDashboardComponent implements OnInit {
       })
       .subscribe(
         (response: ResponseObject) => {
-          console.log(response);
           const homeDropdown = [
             { id: 1, projectname: "Project" },
             { id: 2, projectname: "Role" },
