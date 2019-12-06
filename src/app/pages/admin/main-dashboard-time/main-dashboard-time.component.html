@@ -21,13 +21,8 @@
             <input id="date" type="date" value="">
         </div>
 
-        <div *ngIf="showEmptyData">
-            <div class="cabor">Empty Data</div>
-        </div>
-
-
-        <div *ngIf="showNameProject">
-            <mat-card *ngFor="let item of objectCard" (click)="onClick()" class="cabor">
+        <div>
+            <mat-card *ngFor="let item of objectCard" (click)="onClick(item)" class="cabor">
                 <mat-card-header>
                     <mat-card-title class="title">{{ item.reportdate | date:'fullDate'}}</mat-card-title>
                 </mat-card-header>

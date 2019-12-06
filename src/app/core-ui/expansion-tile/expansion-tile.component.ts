@@ -51,15 +51,9 @@ export class ExpansionTileComponent implements OnInit {
   }
 
   doDetail() {
-    this.mainDashboardService.selectedID = this.mainDashboard.theCurrentChosenID;
-    this.mainDashboardService.selectedName = this.mainDashboard.theCurrentChosen;
-    if (this.mainDashboard.selectedMainDashboardDropdown === '' || this.mainDashboard.selectedMainDashboardDropdown === 'Project') {
-      this.mainDashboardService.selectedMainDashboardCategory = 'projects';
-      this.router.navigateByUrl('home-admin/main-dashboard-time');
-    } else if (this.mainDashboard.selectedMainDashboardDropdown === 'Role') {
-      this.mainDashboardService.selectedMainDashboardCategory = 'roles';
-      this.router.navigateByUrl('home-admin/main-dashboard-time');
-    }
+    this.mainDashboardService.setSelectedID(this.mainDashboard.theCurrentChoosenId);
+    this.mainDashboardService.setSelectedFilter(this.mainDashboard.theCurrentChoosenFilter);
+    this.router.navigateByUrl('home-admin/main-dashboard-time');
   }
 
   doEdit() {

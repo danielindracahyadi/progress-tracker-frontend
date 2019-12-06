@@ -40,10 +40,12 @@ export class MainDashboardComponent implements OnInit {
   public index: number;
   public selfRef: MainDashboardComponent;
 
-  theSearchResult = "";
-  theCurrentChosen = "";
-  theCurrentChosenID = "";
-  featureTambah = "";
+
+  theSearchResult = '';
+  theCurrentChosen = '';
+  theCurrentChoosenId : any;
+  theCurrentChoosenFilter : any;
+  featureTambah = '';
 
   mainDashboards = [];
   constructor(
@@ -169,9 +171,14 @@ export class MainDashboardComponent implements OnInit {
       this.selectedMainDashboardDropdown === ""
     ) {
       this.theCurrentChosen = chosenData.projectname;
-    } else if (this.selectedMainDashboardDropdown === "Role") {
+      this.theCurrentChoosenId = chosenData.id;
+      this.theCurrentChoosenFilter = 'projects';
+    } else if (this.selectedMainDashboardDropdown === 'Role') {
       this.theCurrentChosen = chosenData.rolename;
-    } else if (this.selectedMainDashboardDropdown === "User") {
+      this.theCurrentChoosenId = chosenData.id;
+      this.theCurrentChoosenFilter = 'roles';
+    } else if (this.selectedMainDashboardDropdown === 'User') {
+      this.theCurrentChoosenId = chosenData.id;
       this.theCurrentChosen = chosenData.username;
     }
     this.theCurrentChosenID = chosenData.id;

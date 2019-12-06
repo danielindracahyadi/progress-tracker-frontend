@@ -1,64 +1,64 @@
 <component-header text="Hello, Admin"></component-header>
-<div style="position:absolute; top:0; bottom:0; left:0; right: 0; display: flex; flex-direction: column;">
+<div style="position:absolute; top:0; bottom:0; left:0; right: 0; display: flex; flex-direction: column;" *ngFor="let item of objectCard">
     <mat-sidenav-container style="flex: 1">
         <mat-sidenav mode="side" opened="true">
             <mat-card class="cabor">
                 <mat-card-title>
-                    <core-ui-text-view text="Dinas Kesehatan" classtouse="title"></core-ui-text-view>
+                    <core-ui-text-view classtouse="title" text="{{ item.projectname }}"></core-ui-text-view>
                 </mat-card-title>
                 <mat-card-subtitle>
-                    <core-ui-text-view text="Rabu, 26 November 2019" classtouse="subtitle"></core-ui-text-view>
+                    <core-ui-text-view text="{{ item.reportdate | date: 'EE, d MMMM yyyy' }}" classtouse="subtitle"></core-ui-text-view>
                 </mat-card-subtitle>
             </mat-card>
-            <mat-card *ngFor="let obj of dataDummy" class="cabor" (click)="change(obj)">
-                <div class="minmarg1">
-                    <div class='beinline-left'>
-                        <svg-group1172></svg-group1172>
-                    </div>
-                    <div class='beinline-right'>
-                        <mat-card-title>
-                            <core-ui-text-view [text]="obj.role" classtouse="bold"></core-ui-text-view>
-                        </mat-card-title>
-                    </div>
-                </div>
-                <br>
-                <mat-card-subtitle>
-                    <core-ui-text-view [text]="'Kamu sudah melakukan ' + obj.workTotal + ' pekerjaan pada project ini'" classtouse="blue"></core-ui-text-view>
-                </mat-card-subtitle>
-            </mat-card>
+            <div *ngFor="let divisions of item.division">
+                <mat-card *ngFor="let tasks of divisions.task" class="cabor" (click)="change(tasks)">
+                    <div class="minmarg1">
+                        <div class='beinline-left'>
+                            <svg-group1172></svg-group1172>
+                        </div>
+                        <div class='beinline-right'>
+                            <mat-card-title>
+                                 <core-ui-text-view text="{{ divisions.rolename }}" classtouse="bold"></core-ui-text-view>
+                            </mat-card-title>
+                        </div>
+                        </div>
+                        <br>
+                        <mat-card-subtitle>
+                            <core-ui-text-view text="{{tasks.name}}" classtouse="blue"></core-ui-text-view>
+                        </mat-card-subtitle>
+                        <mat-card-subtitle >
+                            <core-ui-text-view [text]="'Ada ' + tasks.jobs.length + ' pekerjaan pada project ini'" classtouse="blue"></core-ui-text-view>
+                        </mat-card-subtitle>
+                </mat-card>
+            </div>
+
+
+
         </mat-sidenav>
 
         <mat-sidenav-content>
-            <div *ngFor="let obj of selectedData">
-                <div *ngFor="let thetas of obj.details">
-                    <div class="closer">
-                        <mat-card-title>
-                            <core-ui-text-view [text]="thetas.user" classtouse="bold"></core-ui-text-view>
-                        </mat-card-title>
-                    </div>
-                    <div class="imagi">
-                        <div *ngFor="let tta of thetas.task">
+            <div *ngFor="let tasks of selectedData">
+
+                        <div *ngFor="let job of tasks.jobs" >
                             <div class="nextnext">
                                 <mat-card class="caboria">
                                     <div class="pesento space-between">
                                         <mat-card-title>
-                                            <core-ui-text-view [text]="tta.usta" classtouse="bold"></core-ui-text-view>
+                                            <core-ui-text-view text="{{job.jobtitle}}" classtouse="bold"></core-ui-text-view>
                                         </mat-card-title>
                                         <div class="downer">
                                             <mat-card-subtitle>
-                                                <core-ui-text-view [text]="tta.prog+'%'" classtouse="blue"></core-ui-text-view>
+                                                <core-ui-text-view text="{{job.percentage}}%" classtouse="blue"></core-ui-text-view>
                                             </mat-card-subtitle>
                                         </div>
-                                    </div>
+                                     </div>
                                     <mat-card-subtitle>
-                                        <core-ui-text-view [text]="tta.deta" classtouse="default" layout-wrap></core-ui-text-view>
+                                        <core-ui-text-view text="{{job.jobdesc}}" classtouse="default" layout-wrap></core-ui-text-view>
                                     </mat-card-subtitle>
                                 </mat-card>
                             </div>
+                            <mat-divider></mat-divider>
                         </div>
-                    </div>
-                    <mat-divider></mat-divider>
-                </div>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
