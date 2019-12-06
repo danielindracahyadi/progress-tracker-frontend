@@ -57,9 +57,9 @@ export class ExpansionTileComponent implements OnInit {
   }
 
   doEdit() {
-    this.modalService.setTheCurrentChosenID(this.mainDashboard.theCurrentChosenID);
+    this.modalService.setTheCurrentChosenID(this.mainDashboard.theCurrentChoosenId);
 
-    this.mainDashboardService.setSelectedID(this.mainDashboard.theCurrentChosenID);
+    this.mainDashboardService.setSelectedID(this.mainDashboard.theCurrentChoosenId);
 
     if (this.mainDashboard.selectedMainDashboardDropdown === '' || this.mainDashboard.selectedMainDashboardDropdown === 'Project') {
       this.modalComponent.openDialogAdminEditProject(this.category);
@@ -71,7 +71,7 @@ export class ExpansionTileComponent implements OnInit {
   }
 
   doDelete() {
-    this.mainDashboardService.setSelectedID(this.mainDashboard.theCurrentChosenID);
+    this.mainDashboardService.setSelectedID(this.mainDashboard.theCurrentChoosenId);
     this.modalComponent.openDialogAdminDelete(this.category);
   }
 

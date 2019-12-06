@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ModalDataAdminDeleteComponent implements OnInit {
   category = '';
-  targetID = '';
+  targetID : any;
   categorylink = '';
   authlink = '';
   constructor(

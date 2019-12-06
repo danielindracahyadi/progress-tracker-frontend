@@ -61,7 +61,6 @@ import { ArrowDownComponent } from './svg/arrow-down/arrow-down.component';
 import { ModalDataAdminEditProjectComponent } from './components/modal/modal-data-admin-edit-project/modal-data-admin-edit-project.component';
 import { ModalDataAdminEditRoleComponent } from './components/modal/modal-data-admin-edit-role/modal-data-admin-edit-role.component';
 
-import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.component';
 
 @NgModule({
   declarations: [
@@ -112,7 +111,6 @@ import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.
     ArrowDownComponent,
     ModalDataAdminEditProjectComponent,
     ModalDataAdminEditRoleComponent,
-    DropdownAdminComponent,
     MainDashboardComponent,
     MainDashboardTimeComponent
   ],

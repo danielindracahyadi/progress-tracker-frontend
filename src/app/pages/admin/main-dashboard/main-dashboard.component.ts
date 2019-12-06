@@ -181,6 +181,5 @@ export class MainDashboardComponent implements OnInit {
       this.theCurrentChoosenId = chosenData.id;
       this.theCurrentChosen = chosenData.username;
     }
-    this.theCurrentChosenID = chosenData.id;
   }
 }
