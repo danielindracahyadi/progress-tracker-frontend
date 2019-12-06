@@ -26,31 +26,31 @@ export class ModalDataAdminAddProjectComponent implements OnInit {
 
   }
 
-  save(){
-    const token = localStorage.getItem("userToken");
+  save() {
+    const token = localStorage.getItem("adminToken");
     let headers = new HttpHeaders({
       "Content-Type": "application/json",
       authorization: token
     });
     let options = { headers: headers };
     this.httpClient.post('https://nameless-cove-75161.herokuapp.com/api/feature/admin/add-project',
-    {
-      'projectName' : this.projectName,
-    }, options)
-    .subscribe(
-      data  => {
-      this.theData = data;
-      if (this.theData.success === true) {
-        window.location.reload();
-      } else {
-      }
-    },
-    error  => {
-      this.errorLogin = true;
-      this.errorMessage = error.error.message;
-      return;
-    }
-    );
+      {
+        'projectName': this.projectName,
+      }, options)
+      .subscribe(
+        data => {
+          this.theData = data;
+          if (this.theData.success === true) {
+            window.location.reload();
+          } else {
+          }
+        },
+        error => {
+          this.errorLogin = true;
+          this.errorMessage = error.error.message;
+          return;
+        }
+      );
 
   }
 }

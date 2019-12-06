@@ -12,8 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatRippleModule, MatInputModule, MatCardModule, MatDividerModule,
-  MatExpansionModule, MatSelectModule, MatSidenavModule, MatDialogModule, MatProgressSpinnerModule, MatSliderModule } from '@angular/material';
+import {
+  MatRippleModule, MatInputModule, MatCardModule, MatDividerModule,
+  MatExpansionModule, MatSelectModule, MatSidenavModule, MatDialogModule, MatProgressSpinnerModule, MatSliderModule
+} from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatIconModule } from '@angular/material/icon';
 import { DropdownComponent } from './core-ui/dropdown/dropdown.component';
@@ -30,7 +32,7 @@ import { CardAddReportDetailComponent } from './components/card-add-report-detai
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardAddReportTaskComponent } from './components/card-add-report-task/card-add-report-task.component';
 import { ExpansionTileComponent } from './core-ui/expansion-tile/expansion-tile.component';
-import { MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { CardComponent } from './components/card/card.component';
 import { HomeReportComponent } from './pages/home-report/home-report.component';
 import { Group1172Component } from './svg/group1172/group1172.component';
@@ -54,8 +56,11 @@ import { ModalDataAdminDeleteComponent } from './components/modal/modal-data-adm
 import { ButtonAdminComponent } from './core-ui/button-admin/button-admin.component';
 import { LoginSceneModule } from './pages/login-scene/login-scene.module';
 import { HeaderComponent } from './components/header/header.component';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { ArrowDownComponent } from './svg/arrow-down/arrow-down.component';
+import { ModalDataAdminEditProjectComponent } from './components/modal/modal-data-admin-edit-project/modal-data-admin-edit-project.component';
+import { ModalDataAdminEditRoleComponent } from './components/modal/modal-data-admin-edit-role/modal-data-admin-edit-role.component';
+
 
 @NgModule({
   declarations: [
@@ -104,6 +109,8 @@ import { ArrowDownComponent } from './svg/arrow-down/arrow-down.component';
     MainDashboardTimeComponent,
     HeaderComponent,
     ArrowDownComponent,
+    ModalDataAdminEditProjectComponent,
+    ModalDataAdminEditRoleComponent,
   ],
   exports: [
     AppComponent,
@@ -131,7 +138,9 @@ import { ArrowDownComponent } from './svg/arrow-down/arrow-down.component';
     Group1172Component,
     MainDashboardComponent,
     MainDashboardTimeComponent,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    ModalDataAdminEditProjectComponent,
+    ModalDataAdminEditRoleComponent,
   ],
   entryComponents: [
     CardAddReportDropdownComponent,
@@ -143,7 +152,9 @@ import { ArrowDownComponent } from './svg/arrow-down/arrow-down.component';
     ModalDataAdminAddRoleComponent,
     ModalDataAdminEditComponent,
     ModalDataAdminDeleteComponent,
-    ButtonAdminComponent
+    ButtonAdminComponent,
+    ModalDataAdminEditProjectComponent,
+    ModalDataAdminEditRoleComponent,
   ],
   imports: [
     BrowserModule,
@@ -175,4 +186,4 @@ import { ArrowDownComponent } from './svg/arrow-down/arrow-down.component';
 
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

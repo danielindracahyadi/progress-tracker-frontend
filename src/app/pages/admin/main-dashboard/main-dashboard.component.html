@@ -58,7 +58,7 @@
     <div *ngIf="showDetailUser">
         <div *ngFor="let obj of dataUserName">
             <div class="dropdown bondro2">
-                <core-ui-expansion-tile [text]="obj.username" (click)="getDetailName(obj)"></core-ui-expansion-tile>
+                <core-ui-expansion-tile [text]="obj.name" (click)="getDetailName(obj)"></core-ui-expansion-tile>
             </div>
         </div>
     </div>

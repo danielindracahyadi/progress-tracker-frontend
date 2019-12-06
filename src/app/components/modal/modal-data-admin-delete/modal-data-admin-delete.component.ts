@@ -27,7 +27,7 @@ export class ModalDataAdminDeleteComponent implements OnInit {
   errorLogin: boolean = false;
 
   ngOnInit() {
-    if(this.mainDashboardService.selectedMainDashboardCategory === '') {
+    if (this.mainDashboardService.selectedMainDashboardCategory === '') {
       this.modalService.setCategory('Project');
     } else {
       this.modalService.setCategory(this.mainDashboardService.selectedMainDashboardCategory);
@@ -52,26 +52,26 @@ export class ModalDataAdminDeleteComponent implements OnInit {
       this.authlink = 'feature';
     }
 
-    const token = localStorage.getItem('userToken');
+    const token = localStorage.getItem('adminToken');
     const headers = new HttpHeaders()
       .set('authorization', token);
     this.httpClient.get('https://nameless-cove-75161.herokuapp.com/api/' + this.authlink + '/admin/delete-' + this.categorylink + '/' + this.targetID,
-    {
-      headers
-    })
-    .subscribe(
-      data  => {
-      this.theData = data;
-      if (this.theData.success === true) {
-        window.location.reload();
-      } else {
-      }
-    },
-    error  => {
-      this.errorLogin = true;
-      this.errorMessage = error.error.message;
-      return;
-    }
-    );
+      {
+        headers
+      })
+      .subscribe(
+        data => {
+          this.theData = data;
+          if (this.theData.success === true) {
+            window.location.reload();
+          } else {
+          }
+        },
+        error => {
+          this.errorLogin = true;
+          this.errorMessage = error.error.message;
+          return;
+        }
+      );
   }
 }

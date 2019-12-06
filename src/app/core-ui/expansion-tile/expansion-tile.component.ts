@@ -28,7 +28,7 @@ export class ExpansionTileComponent implements OnInit {
     private mainDashboard: MainDashboardComponent,
     private modalService: ModalService,
     private modalComponent: ModalComponent,
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.featureTambah = this.mainDashboard.featureTambah;
@@ -53,7 +53,7 @@ export class ExpansionTileComponent implements OnInit {
   doDetail() {
     this.mainDashboardService.selectedID = this.mainDashboard.theCurrentChosenID;
     this.mainDashboardService.selectedName = this.mainDashboard.theCurrentChosen;
-    if(this.mainDashboard.selectedMainDashboardDropdown === '' || this.mainDashboard.selectedMainDashboardDropdown === 'Project') {
+    if (this.mainDashboard.selectedMainDashboardDropdown === '' || this.mainDashboard.selectedMainDashboardDropdown === 'Project') {
       this.mainDashboardService.selectedMainDashboardCategory = 'projects';
       this.router.navigateByUrl('home-admin/main-dashboard-time');
     } else if (this.mainDashboard.selectedMainDashboardDropdown === 'Role') {
@@ -61,13 +61,24 @@ export class ExpansionTileComponent implements OnInit {
       this.router.navigateByUrl('home-admin/main-dashboard-time');
     }
   }
+
   doEdit() {
     console.log('Edit Name: ' + this.mainDashboard.theCurrentChosen);
     console.log('Edit ID: ' + this.mainDashboard.theCurrentChosenID);
+    this.modalService.setTheCurrentChosenID(this.mainDashboard.theCurrentChosenID);
+
+    this.mainDashboardService.setSelectedID(this.mainDashboard.theCurrentChosenID);
+
+    if (this.mainDashboard.selectedMainDashboardDropdown === '' || this.mainDashboard.selectedMainDashboardDropdown === 'Project') {
+      this.modalComponent.openDialogAdminEditProject(this.category);
+    } else if (this.mainDashboard.selectedMainDashboardDropdown === 'Role') {
+      this.modalComponent.openDialogAdminEditRole(this.category);
+    } else if (this.mainDashboard.selectedMainDashboardDropdown === 'User') {
+      this.modalComponent.openDialogAdminEdit(this.category);
+    }
   }
+
   doDelete() {
-    console.log('Delete Name: ' + this.mainDashboard.theCurrentChosen);
-    console.log('Delete ID: ' + this.mainDashboard.theCurrentChosenID);
     this.mainDashboardService.setSelectedID(this.mainDashboard.theCurrentChosenID);
     this.modalComponent.openDialogAdminDelete(this.category);
   }
