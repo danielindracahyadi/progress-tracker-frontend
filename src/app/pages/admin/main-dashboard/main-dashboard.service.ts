@@ -7,8 +7,9 @@ export class MainDashboardService {
 
   constructor() { }
   selectedMainDashboardCategory: string = '';
-  selectedID: string = '';
-  selectedName: string = '';
+  private selectedID: number;
+  private selectedFilter: string;
+  private selectedDate: string;
 
   getSelectedMainDashboardCategory() {
     return this.selectedMainDashboardCategory;
@@ -17,17 +18,25 @@ export class MainDashboardService {
     this.selectedMainDashboardCategory = selectedMainDashboardCategory;
   }
 
-  getSelectedName() {
-    return this.selectedName;
-  }
-  setSelectedName(selectedID: string) {
-    this.selectedName = this.selectedName;
-  }
 
   getSelectedID() {
     return this.selectedID;
   }
-  setSelectedID(selectedID: string) {
+  setSelectedID(selectedID: number) {
     this.selectedID = selectedID;
+  }
+
+  getSelectedFilter() {
+    return this.selectedFilter;
+  }
+  setSelectedFilter(selectedFilter: string) {
+    this.selectedFilter = selectedFilter;
+  }
+
+  getSelectedDate() {
+    return this.selectedDate;
+  }
+  setSelectedDate(selectedDate: string) {
+    this.selectedDate = selectedDate;
   }
 }

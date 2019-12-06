@@ -111,6 +111,8 @@ import { ModalDataAdminEditRoleComponent } from './components/modal/modal-data-a
     ArrowDownComponent,
     ModalDataAdminEditProjectComponent,
     ModalDataAdminEditRoleComponent,
+    MainDashboardComponent,
+    MainDashboardTimeComponent
   ],
   exports: [
     AppComponent,
