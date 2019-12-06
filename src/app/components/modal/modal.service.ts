@@ -6,13 +6,20 @@ import { _fixedSizeVirtualScrollStrategyFactory } from '@angular/cdk/scrolling';
 })
 export class ModalService {
   category = '';
+  theCurrentChosenID = '';
 
   constructor() { }
 
-  setCategory(category){
+  setCategory(category) {
     this.category = category;
   }
-  getCategory(){
+  getCategory() {
     return this.category;
+  }
+  setTheCurrentChosenID(theCurrentChosenID) {
+    this.theCurrentChosenID = theCurrentChosenID;
+  }
+  getTheCurrentChosenID() {
+    return this.theCurrentChosenID;
   }
 }

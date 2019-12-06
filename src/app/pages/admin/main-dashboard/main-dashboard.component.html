@@ -1,27 +1,28 @@
 <component-header text="Hello, {{userName}} (Admin)"></component-header>
 <div class="top">
     <div class="beinline-left">
-        <core-ui-dropdown
-            [data]="dataMainDashboardDropdown" function="selectedMainDashboardCategory"
-            placeholder="Project" classtouse="bluewhite"
-            style="position: absolute; top: 15px; left: 40px;">
+        <core-ui-dropdown [data]="dataMainDashboardDropdown" function="selectedMainDashboardCategory"
+            placeholder="Project" classtouse="bluewhite" style="position: absolute; top: 48px; left: 40px;">
         </core-ui-dropdown>
-        <form (submit)="onSubmit(search.value)" class="placer" >
-            <input type="text" #search placeholder="Cari project" onfocus="this.value=''" >
+        <form (submit)="onSubmit(search.value)" class="placer">
+            <input type="text" #search placeholder="Cari project" onfocus="this.value=''">
         </form>
 
     </div>
     <div *ngIf="showModalProject" class="beinline-right">
         <core-ui-button text="Export csv" classtouse="btn-tosca btn-free-homelittle"></core-ui-button>&nbsp;&nbsp;
-        <component-modal open="openDialogAdminAddProject" text="➕ Tambah {{featureTambah}}" classtouse="btn-home-new"></component-modal>
+        <component-modal open="openDialogAdminAddProject" text="➕ Tambah {{featureTambah}}" classtouse="btn-home-new">
+        </component-modal>
     </div>
     <div *ngIf="showModalRole" class="beinline-right">
         <core-ui-button text="Export csv" classtouse="btn-tosca btn-free-homelittle"></core-ui-button>&nbsp;&nbsp;
-        <component-modal open="openDialogAdminAddRole" text="➕ Tambah {{featureTambah}}" classtouse="btn-home-new"></component-modal>
+        <component-modal open="openDialogAdminAddRole" text="➕ Tambah {{featureTambah}}" classtouse="btn-home-new">
+        </component-modal>
     </div>
     <div *ngIf="showModalUser" class="beinline-right">
         <core-ui-button text="Export csv" classtouse="btn-tosca btn-free-homelittle"></core-ui-button>&nbsp;&nbsp;
-        <component-modal open="openDialogAdminAdd" text="➕ Tambah {{featureTambah}}" classtouse="btn-home-new"></component-modal>
+        <component-modal open="openDialogAdminAdd" text="➕ Tambah {{featureTambah}}" classtouse="btn-home-new">
+        </component-modal>
     </div>
 </div>
 
@@ -57,7 +58,7 @@
     <div *ngIf="showDetailUser">
         <div *ngFor="let obj of dataUserName">
             <div class="dropdown bondro2">
-                <core-ui-expansion-tile [text]="obj.username" (click)="getDetailName(obj)"></core-ui-expansion-tile>
+                <core-ui-expansion-tile [text]="obj.name" (click)="getDetailName(obj)"></core-ui-expansion-tile>
             </div>
         </div>
     </div>

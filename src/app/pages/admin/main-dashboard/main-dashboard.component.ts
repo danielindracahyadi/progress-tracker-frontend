@@ -53,7 +53,7 @@ export class MainDashboardComponent implements OnInit {
     private router: Router,
     private _translateService: AppService,
     private httpClient: HttpClient
-  ) {}
+  ) { }
 
   selectedMainDashboardDropdown: any = "";
 
@@ -113,10 +113,10 @@ export class MainDashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (localStorage.getItem("userToken") === null) {
+    if (localStorage.getItem("adminToken") === null) {
       this.router.navigateByUrl("admin");
     }
-    const token = localStorage.getItem("userToken");
+    const token = localStorage.getItem("adminToken");
     const headers = new HttpHeaders().set("authorization", token);
     this.httpClient
       .get("https://nameless-cove-75161.herokuapp.com/api/page/admin/home", {

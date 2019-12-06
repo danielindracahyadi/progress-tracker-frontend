@@ -1,5 +1,5 @@
-import {Component, Inject, Input} from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Component, Inject, Input } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ModalDataUserSubmitComponent } from './modal-data-user-submit/modal-data-user-submit.component';
 import { ModalDataUserDeleteComponent } from './modal-data-user-delete/modal-data-user-delete.component';
 import { ModalDataUserConfirmationComponent } from './modal-data-user-confirmation/modal-data-user-confirmation.component';
@@ -9,6 +9,8 @@ import { ModalDataAdminAddProjectComponent } from './modal-data-admin-add-projec
 import { ModalDataAdminEditComponent } from './modal-data-admin-edit/modal-data-admin-edit.component';
 import { ModalDataAdminDeleteComponent } from './modal-data-admin-delete/modal-data-admin-delete.component';
 import { ModalService } from './modal.service';
+import { ModalDataAdminEditProjectComponent } from './modal-data-admin-edit-project/modal-data-admin-edit-project.component';
+import { ModalDataAdminEditRoleComponent } from './modal-data-admin-edit-role/modal-data-admin-edit-role.component';
 
 @Component({
   selector: 'component-modal',
@@ -21,11 +23,11 @@ export class ModalComponent {
   @Input() text = 'custom button modal';
   @Input() classtouse = '';
 
-  constructor(public dialog: MatDialog, public modalService: ModalService) {}
+  constructor(public dialog: MatDialog, public modalService: ModalService) { }
 
   openModal() {
     if (this.open === 'openDialogUserSubmit') {
-      this.openDialogUserSubmit ();
+      this.openDialogUserSubmit();
     } else if (this.open === 'openDialogUserDelete') {
       this.openDialogUserDelete();
     } else if (this.open === 'openDialogUserConfirmation') {
@@ -33,7 +35,11 @@ export class ModalComponent {
     } else if (this.open === 'openDialogAdminAdd') {
       this.openDialogAdminAdd();
     } else if (this.open === 'openDialogAdminEdit') {
-      this.openDialogAdminEdit();
+      this.openDialogAdminEdit(this.category);
+    } else if (this.open === 'openDialogAdminEditProject') {
+      this.openDialogAdminEditProject(this.category);
+    } else if (this.open === 'openDialogAdminEditRole') {
+      this.openDialogAdminEditRole(this.category);
     } else if (this.open === 'openDialogAdminDelete') {
       this.openDialogAdminDelete(this.category);
     } else if (this.open === 'openDialogAdminAddRole') {
@@ -78,7 +84,7 @@ export class ModalComponent {
   }
 
   openDialogAdminAdd(): void {
-    const dialogRef = this.dialog.open(ModalDataAdminAddComponent , {
+    const dialogRef = this.dialog.open(ModalDataAdminAddComponent, {
       width: '400px',
       height: '450px'
     });
@@ -89,7 +95,7 @@ export class ModalComponent {
   }
 
   openDialogAdminAddRole(): void {
-    const dialogRef = this.dialog.open(ModalDataAdminAddRoleComponent , {
+    const dialogRef = this.dialog.open(ModalDataAdminAddRoleComponent, {
       width: '400px',
       height: '270px'
     });
@@ -100,7 +106,7 @@ export class ModalComponent {
   }
 
   openDialogAdminAddProject(): void {
-    const dialogRef = this.dialog.open(ModalDataAdminAddProjectComponent , {
+    const dialogRef = this.dialog.open(ModalDataAdminAddProjectComponent, {
       width: '400px',
       height: '270px'
     });
@@ -110,10 +116,32 @@ export class ModalComponent {
     });
   }
 
-  openDialogAdminEdit(): void {
+  openDialogAdminEdit(category: string): void {
     const dialogRef = this.dialog.open(ModalDataAdminEditComponent, {
       width: '400px',
-      height: '320px'
+      height: '270px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  openDialogAdminEditProject(category: string): void {
+    const dialogRef = this.dialog.open(ModalDataAdminEditProjectComponent, {
+      width: '400px',
+      height: '270px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  openDialogAdminEditRole(category: string): void {
+    const dialogRef = this.dialog.open(ModalDataAdminEditRoleComponent, {
+      width: '400px',
+      height: '270px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
