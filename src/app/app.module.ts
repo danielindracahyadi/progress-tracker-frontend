@@ -112,7 +112,8 @@ import { DropdownAdminComponent } from './core-ui/dropdown-admin/dropdown-admin.
     ArrowDownComponent,
     ModalDataAdminEditProjectComponent,
     ModalDataAdminEditRoleComponent,
-    DropdownAdminComponent
+    DropdownAdminComponent,
+    MainDashboardComponent
   ],
   exports: [
     AppComponent,
