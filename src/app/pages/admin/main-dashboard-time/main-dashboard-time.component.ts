@@ -14,6 +14,8 @@ export class MainDashboardTimeComponent implements OnInit {
   objectCard: any;
   dataRoles: any;
 
+  userName: any;
+
   dataProject: any;
   dataName: any;
   MainDashboardCategory: any;
@@ -42,6 +44,7 @@ export class MainDashboardTimeComponent implements OnInit {
     this.SelectedID = this.mainDashboardService.selectedID;
     const token = localStorage.getItem("adminToken");
     const headers = new HttpHeaders().set("authorization", token);
+    this.userName = localStorage.getItem("userName");
     this.httpClient
       .get(
         "https://nameless-cove-75161.herokuapp.com/api/page/admin/timeline?filterBy=" +
