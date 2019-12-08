@@ -22,6 +22,7 @@ export class ModalDataAdminAddComponent implements OnInit {
   errorMessage: string = '';
   errorLogin: boolean = false;
 
+
   ngOnInit() {
 
   }
