@@ -18,7 +18,7 @@ export class ModalDataAdminAddProjectComponent implements OnInit {
 
   ngOnInit() {}
 
-  save() {
+  save(){
     const token = localStorage.getItem("adminToken");
     let headers = new HttpHeaders({
       "Content-Type": "application/json",

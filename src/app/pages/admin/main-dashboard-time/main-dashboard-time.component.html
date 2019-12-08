@@ -1,28 +1,21 @@
 <body>
-  <component-header text="Hello, Admin"></component-header>
+  <component-header text="Hello, {{userName}} (Admin)"></component-header>
   <section id="main-dashboard-time">
-    <div style="display: inline-block; width: 250px; height: 20px;">
-      <core-ui-text-view
-        text="{{ dataName }}"
-        classtouse="bold"
-      ></core-ui-text-view>
+    <div style="margin-left: 50px; display: inline-block;">
+        <b class="top">
+        <core-ui-text-view
+            style="font-family: Source Sans Pro; font-size: large; margin-left: 50px;"
+            classtouse="bold"
+            text="{{ dataName }}"
+        ></core-ui-text-view>
+        </b>
     </div>
 
-    <div style="display: inline-block; width: 60px; height: 20px;">
-      <core-ui-text-view text="Lihat : " classtouse="bold"></core-ui-text-view>
-    </div>
-    <div style="display: inline-block; width: 160px; height: 20px;">
-      <input id="date" type="date" value="" />
-    </div>
-    <div style="display: inline-block; width: 60px; height: 20px;">
-      <core-ui-text-view text="Hingga " classtouse="bold"></core-ui-text-view>
-    </div>
-    <div style="display: inline-block; width: 90px; height: 20px;">
-      <input id="date" type="date" value="" />
-    </div>
 
     <div *ngIf="showEmptyData">
-      <div class="cabor">Empty Data</div>
+      <div  style="font-size: 23px; font-family: Source Sans Pro; text-align:center;margin-top: 180px;">
+        <b>Empty Data</b>
+    </div>
     </div>
 
     <div *ngIf="showNameProject">
