@@ -18,6 +18,13 @@ export class MainDashboardService {
     this.selectedMainDashboardCategory = selectedMainDashboardCategory;
   }
 
+  getSelectedName() {
+    return this.selectedName;
+  }
+  setSelectedName(selectedName: string) {
+    this.selectedName = selectedName;
+  }
+
   getSelectedID() {
     return this.selectedID;
   }

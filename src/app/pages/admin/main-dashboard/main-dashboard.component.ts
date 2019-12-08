@@ -159,7 +159,7 @@ export class MainDashboardComponent implements OnInit {
         .includes(this.theSearchResult.toLowerCase())
     );
     this.searchDataUser = this.searchDataUser.filter(theData =>
-      theData.username
+      theData.name
         .toLowerCase()
         .includes(this.theSearchResult.toLowerCase())
     );

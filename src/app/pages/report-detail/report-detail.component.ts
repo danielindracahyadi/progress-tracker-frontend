@@ -51,6 +51,7 @@ export class UserReportDetailComponent implements OnInit {
       "https://nameless-cove-75161.herokuapp.com/api/page/report-detail?date=" +
       this.stringDate;
     const token = localStorage.getItem("userToken");
+    this.userName = localStorage.getItem("userName");
     const headers = new HttpHeaders().set("authorization", token);
     this.httpClient
       .get(this.stringLink, {

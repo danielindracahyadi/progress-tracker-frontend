@@ -62,7 +62,7 @@
     <div *ngIf="showSearchUser">
         <div *ngFor="let obj of searchDataUser">
             <div class="dropdown bondro1">
-                <core-ui-expansion-tile [text]="obj.username" (click)="getDetailName(obj)"></core-ui-expansion-tile>
+                <core-ui-expansion-tile [text]="obj.name" (click)="getDetailName(obj)"></core-ui-expansion-tile>
             </div>
         </div>
     </div>
