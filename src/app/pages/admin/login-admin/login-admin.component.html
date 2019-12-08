@@ -1,34 +1,54 @@
 <section id="loginAdmin">
-  <div class= "login-admin-center">
-    <form class="loginForm" method="POST" >
-      <img class="logocodify" src="../../../../assets/Codify_Logo_Black.png">
+  <div class="login-admin-center">
+    <form class="loginForm" method="POST">
+      <img class="logocodify" src="../../../../assets/Codify_Logo_Black.png" />
       <div style="margin-left:23px">
-        <core-ui-text-view text="Halo,Admin!" class="title-login-admin" ></core-ui-text-view>
+        <core-ui-text-view
+          text="Halo, Admin!"
+          class="title-login-admin"
+        ></core-ui-text-view>
       </div>
-        <div class="form-group" fxLayout="row" fxLayoutAlign="center">
-            <input
-            placeholder="Username"
-            type="text"
-            class="admin"
-            [(ngModel)]="username"
-            name="username"
-            class="admin">
-        </div><br>
-        <div class="form-group" fxLayout="row" fxLayoutAlign="center">
-            <input
-            placeholder="Password"
-            type="password"
-            class="admin"
-            [(ngModel)]="password"
-            name="password"
-            class="admin">
-        </div><br>
-        <div class="form-group">
-          <core-ui-button text="Masuk" classtouse="btn-blue btn-login" (click)="login()" style="margin-left: 100px;"></core-ui-button>
-          <mat-spinner *ngIf="loading" [diameter]="30"></mat-spinner>
-          <core-ui-text-view classtouse="red" text="Username or Password are Required" *ngIf="empty"></core-ui-text-view>
-          <core-ui-text-view classtouse="red" text={{errorMessage}} *ngIf="errorLogin"></core-ui-text-view>
-        </div>
+      <div class="form-group" fxLayout="row" fxLayoutAlign="center">
+        <input
+          placeholder="Username"
+          type="text"
+          class="admin"
+          [(ngModel)]="username"
+          name="username"
+          class="admin"
+        />
+      </div>
+      <br />
+      <div class="form-group" fxLayout="row" fxLayoutAlign="center">
+        <input
+          placeholder="Password"
+          type="password"
+          class="admin"
+          [(ngModel)]="password"
+          name="password"
+          class="admin"
+        />
+      </div>
+      <br />
+      <div class="form-group">
+        <core-ui-button
+          text="Masuk"
+          classtouse="btn-blue btn-login"
+          (click)="login()"
+          style="margin-left: 100px;"
+        ></core-ui-button>
+        <mat-spinner *ngIf="loading" [diameter]="20"></mat-spinner>
+        <core-ui-text-view
+          classtouse="red"
+          text="Username or Password are Required"
+          *ngIf="empty"
+        ></core-ui-text-view>
+        <core-ui-text-view
+          classtouse="red"
+          text="{{ errorMessage }}"
+          *ngIf="errorLogin"
+        ></core-ui-text-view>
+      </div>
     </form>
   </div>
 </section>

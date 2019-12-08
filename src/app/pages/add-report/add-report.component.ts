@@ -121,8 +121,6 @@ export class AddReportComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.addReportData.reportDate);
-    console.log(this.addReportData.division);
     this.loading = false;
     this.loading = true;
     const token = localStorage.getItem("userToken");

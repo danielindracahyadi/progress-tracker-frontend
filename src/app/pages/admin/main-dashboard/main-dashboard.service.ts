@@ -1,15 +1,15 @@
-import { Injectable, Output } from '@angular/core';
+import { Injectable, Output } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class MainDashboardService {
-
-  constructor() { }
-  selectedMainDashboardCategory: string = '';
-  private selectedID: number;
-  private selectedFilter: string;
-  private selectedDate: string;
+  constructor() {}
+  selectedMainDashboardCategory: string = "";
+  selectedID: number;
+  selectedFilter: string;
+  selectedDate: string;
+  selectedName: string = "";
 
   getSelectedMainDashboardCategory() {
     return this.selectedMainDashboardCategory;
@@ -17,7 +17,6 @@ export class MainDashboardService {
   setSelectedMainDashboardCategory(selectedMainDashboardCategory: string) {
     this.selectedMainDashboardCategory = selectedMainDashboardCategory;
   }
-
 
   getSelectedID() {
     return this.selectedID;

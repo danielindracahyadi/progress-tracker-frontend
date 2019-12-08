@@ -40,12 +40,11 @@ export class MainDashboardComponent implements OnInit {
   public index: number;
   public selfRef: MainDashboardComponent;
 
-
-  theSearchResult = '';
-  theCurrentChosen = '';
-  theCurrentChoosenId : any;
-  theCurrentChoosenFilter : any;
-  featureTambah = '';
+  theSearchResult = "";
+  theCurrentChosen = "";
+  theCurrentChoosenId: any;
+  theCurrentChoosenFilter: any;
+  featureTambah = "";
 
   mainDashboards = [];
   constructor(
@@ -55,7 +54,7 @@ export class MainDashboardComponent implements OnInit {
     private router: Router,
     private _translateService: AppService,
     private httpClient: HttpClient
-  ) { }
+  ) {}
 
   selectedMainDashboardDropdown: any = "";
 
@@ -120,6 +119,7 @@ export class MainDashboardComponent implements OnInit {
     }
     const token = localStorage.getItem("adminToken");
     const headers = new HttpHeaders().set("authorization", token);
+    this.userName = localStorage.getItem("userName");
     this.httpClient
       .get("https://nameless-cove-75161.herokuapp.com/api/page/admin/home", {
         headers
@@ -172,12 +172,12 @@ export class MainDashboardComponent implements OnInit {
     ) {
       this.theCurrentChosen = chosenData.projectname;
       this.theCurrentChoosenId = chosenData.id;
-      this.theCurrentChoosenFilter = 'projects';
-    } else if (this.selectedMainDashboardDropdown === 'Role') {
+      this.theCurrentChoosenFilter = "projects";
+    } else if (this.selectedMainDashboardDropdown === "Role") {
       this.theCurrentChosen = chosenData.rolename;
       this.theCurrentChoosenId = chosenData.id;
-      this.theCurrentChoosenFilter = 'roles';
-    } else if (this.selectedMainDashboardDropdown === 'User') {
+      this.theCurrentChoosenFilter = "roles";
+    } else if (this.selectedMainDashboardDropdown === "User") {
       this.theCurrentChoosenId = chosenData.id;
       this.theCurrentChosen = chosenData.username;
     }
