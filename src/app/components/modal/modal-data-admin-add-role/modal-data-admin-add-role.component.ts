@@ -1,53 +1,50 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { FormControl } from '@angular/forms';
+import { FormControl } from "@angular/forms";
 
 @Component({
-  selector: 'app-modal-data-admin-add-role',
-  templateUrl: './modal-data-admin-add-role.component.html',
-  styleUrls: ['./modal-data-admin-add-role.component.sass'],
+  selector: "app-modal-data-admin-add-role",
+  templateUrl: "./modal-data-admin-add-role.component.html",
+  styleUrls: ["./modal-data-admin-add-role.component.sass"]
 })
 export class ModalDataAdminAddRoleComponent implements OnInit {
-
-  constructor(
-    private router: Router,
-    private httpClient: HttpClient,
-  ) { }
+  constructor(private router: Router, private httpClient: HttpClient) {}
 
   roleName: string;
   theData: any;
-  errorMessage: string = '';
+  errorMessage: string = "";
   errorLogin: boolean = false;
 
-  ngOnInit() {
-  }
-  save(){
-    const token = localStorage.getItem("userToken");
+  ngOnInit() {}
+  save() {
+    const token = localStorage.getItem("adminToken");
     let headers = new HttpHeaders({
       "Content-Type": "application/json",
       authorization: token
     });
     let options = { headers: headers };
-    this.httpClient.post('https://nameless-cove-75161.herokuapp.com/api/feature/admin/add-role',
-    {
-      'roleName' : this.roleName,
-    }, options)
-    .subscribe(
-      data  => {
-      this.theData = data;
-      if (this.theData.success === true) {
-        window.location.reload();
-      } else {
-      }
-    },
-    error  => {
-      this.errorLogin = true;
-      this.errorMessage = error.error.message;
-      return;
-    }
-    );
-
+    this.httpClient
+      .post(
+        "https://nameless-cove-75161.herokuapp.com/api/feature/admin/add-role",
+        {
+          roleName: this.roleName
+        },
+        options
+      )
+      .subscribe(
+        data => {
+          this.theData = data;
+          if (this.theData.success === true) {
+            window.location.reload();
+          } else {
+          }
+        },
+        error => {
+          this.errorLogin = true;
+          this.errorMessage = error.error.message;
+          return;
+        }
+      );
   }
-
 }
