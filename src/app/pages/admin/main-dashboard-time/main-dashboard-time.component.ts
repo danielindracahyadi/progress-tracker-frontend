@@ -57,9 +57,7 @@ export class MainDashboardTimeComponent implements OnInit {
           this.objectCard = response.data;
           this.dataRoles = response.data.rolename;
           this.dataProject = response.data.projectname;
-          console.log(this.mainDashboardService.selectedName);
           this.dataName = this.mainDashboardService.selectedName;
-          console.log(response.data.length);
           if (response.data.length === 0) {
             this.showEmptyData = true;
           }

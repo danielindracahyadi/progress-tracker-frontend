@@ -44,7 +44,6 @@ export class LoginAdminComponent implements OnInit {
       .subscribe(
         data => {
           this.theData = data;
-          console.log(this.theData);
           if (this.theData.success === true) {
             localStorage.setItem("adminToken", this.theData.token);
             localStorage.setItem("userName", this.theData.data[0].name);

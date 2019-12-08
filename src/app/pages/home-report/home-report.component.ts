@@ -45,7 +45,6 @@ export class HomeReportComponent implements OnInit {
       })
       .subscribe(
         (response: ResponseObject) => {
-          console.log("response", response);
           this.dataHome = response;
           this.temp = 0;
 
@@ -74,7 +73,6 @@ export class HomeReportComponent implements OnInit {
 
           for (let i = 0; i < this.allResult.length; i++) {
             if (this.allResult[i].id === null) {
-              console.log(this.allResult[i]);
               this.emptyResult.push(this.allResult[i]);
             }
           }
