@@ -14,7 +14,7 @@ export class LoginAdminComponent implements OnInit {
     private router: Router,
     private httpClient: HttpClient,
     private loginService: LoginAdminService
-  ) {}
+  ) { }
 
   username: string = "";
   password: string = "";
@@ -25,7 +25,7 @@ export class LoginAdminComponent implements OnInit {
 
   theData: any;
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   login() {
     this.loading = false;
