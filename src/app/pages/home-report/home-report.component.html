@@ -1,33 +1,40 @@
-<component-header text="Hello, {{userName}}"></component-header>
+<component-header text="Hello, {{ userName }}"></component-header>
 <div class="row">
-  <core-ui-text-input text="Cari" classtouse="kecil"></core-ui-text-input>
+  <input placeholder="Cari" class="cari" [(ngModel)]="textSearch" />
+  <core-ui-button
+    text="Cari"
+    classtouse="btn-blue btn-incard-homeconfirm"
+    (click)="search()"
+    style="justify-content: center;"
+  ></core-ui-button>
 </div>
 
 <div
   fxLayout="row"
   fxLayoutAlign="end"
   style="margin-right:40px"
-  (click)="emptyCard()"
   *ngIf="!showEmpty"
 >
-  <core-ui-button
-    text="Ada {{ empty }} hari yang belum kamu isi nih!"
-    classtouse="btn-alert-yellow"
-  ></core-ui-button>
+  <div (click)="emptyCard()">
+    <core-ui-button
+      text="Ada {{ empty }} hari yang belum kamu isi nih!"
+      classtouse="btn-alert-yellow"
+    ></core-ui-button>
+  </div>
 </div>
 <div
   fxLayout="row"
   fxLayoutAlign="end"
   style="margin-right:40px"
-  (click)="allCard()"
   *ngIf="showEmpty"
 >
-  <core-ui-button
-    text="Tampilkan seluruh hari!"
-    classtouse="btn-alert-yellow"
-  ></core-ui-button>
+  <div (click)="allCard()">
+    <core-ui-button
+      text="Tampilkan seluruh hari!"
+      classtouse="btn-alert-yellow"
+    ></core-ui-button>
+  </div>
 </div>
 <br />
 
-  <component-card [dataHome]="hasil"></component-card>
-
+<component-card [dataHome]="hasil"></component-card>

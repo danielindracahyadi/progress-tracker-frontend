@@ -31,6 +31,7 @@ export class HomeReportComponent implements OnInit {
   temp: number = 0;
   empty: number = 0;
   showEmpty: boolean = false;
+  textSearch: string = "";
 
   async ngOnInit() {
     if (localStorage.getItem("userToken") === null) {
@@ -93,5 +94,25 @@ export class HomeReportComponent implements OnInit {
   allCard() {
     this.showEmpty = false;
     this.hasil = this.allResult;
+  }
+
+  search() {
+    this.hasil = this.allResult;
+    if (this.textSearch === "") {
+      this.hasil = this.allResult;
+    } else {
+      let search = this.textSearch;
+      let filteredArray = this.hasil
+        .filter(element =>
+          element.division.some(division =>
+            division.projectname.toLowerCase().includes(search.toLowerCase())
+          )
+        )
+        .map(element => {
+          let newElt = Object.assign({}, element);
+          return newElt;
+        });
+      this.hasil = filteredArray;
+    }
   }
 }
